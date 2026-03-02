@@ -8,118 +8,107 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f6f6f2;
-    color: #2f3e2e;
-}
-
-/* NAVBAR */
+* {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior:smooth;}
+body {font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
 nav {
-    position: fixed;
-    width: 100%;
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.4s;
-    z-index: 1000;
+position:fixed;width:100%;padding:20px 60px;
+display:flex;justify-content:space-between;align-items:center;
+transition:0.4s;z-index:1000;
 }
-
-nav.scrolled {
-    background: rgba(34, 49, 34, 0.95);
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    margin-left: 30px;
-    font-weight: 400;
-}
-
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: white;
-}
-
-/* HERO */
+nav.scrolled {background:rgba(34,49,34,0.95);}
+nav a {text-decoration:none;color:white;margin-left:30px;}
+.logo {font-family:'Playfair Display',serif;font-size:22px;color:white;}
 
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(20,40,20,0.5), rgba(20,40,20,0.5)), url('land.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 0 20px;
+height:100vh;
+background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('land.jpg') center/cover no-repeat;
+display:flex;justify-content:center;align-items:center;
+text-align:center;color:white;padding:0 20px;
 }
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
+.hero h1 {font-family:'Playfair Display',serif;font-size:60px;margin-bottom:20px;}
+.hero p {font-size:20px;margin-bottom:30px;}
 
 .btn {
-    padding: 14px 35px;
-    border-radius: 30px;
-    border: none;
-    background: #d6e5d8;
-    color: #1e2a1f;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
+padding:14px 35px;border-radius:30px;border:none;
+background:#d6e5d8;color:#1e2a1f;font-weight:500;
+cursor:pointer;transition:0.3s;
 }
+.btn:hover {background:#b7d1bb;}
 
-.btn:hover {
-    background: #b7d1bb;
-}
-
-/* SECTION */
-
-.section {
-    padding: 100px 15%;
-    text-align: center;
-}
+.section {padding:100px 12%;}
 
 .section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    margin-bottom: 30px;
+font-family:'Playfair Display',serif;
+font-size:40px;margin-bottom:30px;text-align:center;
 }
 
-.section p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 18px;
+.fade {
+opacity:0;
+transform:translateY(30px);
+transition:1s ease;
+}
+.fade.show {
+opacity:1;
+transform:translateY(0);
 }
 
-/* FOOTER */
+/* 2 Column */
+.two-col {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
 
+.two-col img {
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Gallery */
+.gallery {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.gallery img {
+width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+.gallery img:hover {
+transform:scale(1.05);
+}
+
+/* Footer */
 footer {
-    background: #1f2e20;
-    color: #ccc;
-    text-align: center;
-    padding: 30px;
+background:#1f2e20;
+color:#ccc;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+/* LINE Button */
+.line-btn {
+position:fixed;
+bottom:25px;
+right:25px;
+background:#06c755;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:500;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+.line-btn:hover {
+background:#05b34d;
 }
 </style>
 </head>
@@ -127,50 +116,85 @@ footer {
 <body>
 
 <nav id="navbar">
-    <div class="logo">Khao Kho Empire</div>
-    <div>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#investment">Investment</a>
-    </div>
+<div class="logo">Khao Kho Empire</div>
+<div>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+</div>
 </nav>
 
 <section class="hero">
-    <div>
-        <h1>Khao Kho Empire</h1>
-        <p>Luxury Mountain Land & Private Pool Villa Estate</p>
-        <button class="btn">Contact Us</button>
-    </div>
+<div>
+<h1>Khao Kho Empire</h1>
+<p>Luxury Mountain Land & Private Pool Villa Estate</p>
+<button class="btn">Contact Us</button>
+</div>
 </section>
 
-<section id="about" class="section">
-    <h2>About The Project</h2>
-    <p>
-        Nestled in the pristine mountains of Khao Kho, this exclusive estate offers 
-        panoramic views, cool climate, and ultimate privacy. Designed for visionary 
-        investors seeking long-term capital growth in Thailand’s emerging wellness 
-        and luxury destination.
-    </p>
+<section id="about" class="section fade">
+<h2>About The Estate</h2>
+<div class="two-col">
+<div>
+<p style="line-height:1.8;font-size:18px;">
+Nestled in pristine mountain landscapes, Khao Kho Empire offers panoramic views,
+cool climate, and absolute privacy. Designed for visionary investors and families
+seeking a premium lifestyle destination.
+</p>
+</div>
+<div>
+<img src="villa1.jpg">
+</div>
+</div>
 </section>
 
-<section id="investment" class="section" style="background:#e8efe8;">
-    <h2>Investment Opportunity</h2>
-    <p>
-        Positioned as a future luxury wellness capital, Khao Kho Empire combines 
-        natural beauty with strategic development potential. Ideal for high-end 
-        villa projects, boutique resorts, or private family estates.
-    </p>
+<section class="section fade" style="background:#e8efe8;">
+<div class="two-col">
+<div>
+<img src="villa2.jpg">
+</div>
+<div>
+<h2>Investment Vision</h2>
+<p style="line-height:1.8;font-size:18px;">
+Strategically positioned for luxury villa development, boutique resorts,
+and wellness retreats. A rare opportunity in Thailand’s emerging
+high-end mountain market.
+</p>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="section fade">
+<h2>Luxury Gallery</h2>
+<div class="gallery">
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+</div>
 </section>
 
 <footer>
-    © 2026 Khao Kho Empire. All Rights Reserved.
+© 2026 Khao Kho Empire. All Rights Reserved.
 </footer>
 
+<a href="https://line.me" target="_blank" class="line-btn">Chat LINE</a>
+
 <script>
-window.addEventListener("scroll", function() {
-    let navbar = document.getElementById("navbar");
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+window.addEventListener("scroll", function(){
+let navbar=document.getElementById("navbar");
+navbar.classList.toggle("scrolled",window.scrollY>50);
 });
+
+const faders=document.querySelectorAll(".fade");
+const appearOptions={threshold:0.2};
+const appearOnScroll=new IntersectionObserver(function(entries,observer){
+entries.forEach(entry=>{
+if(!entry.isIntersecting){return;}
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+});
+},appearOptions);
+faders.forEach(fader=>{appearOnScroll.observe(fader);});
 </script>
 
 </body>
