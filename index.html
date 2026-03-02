@@ -8,42 +8,66 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
-html {scroll-behavior:smooth;}
-body {font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
-/* NAVBAR */
-nav {
+/* ===== NAVBAR PREMIUM ===== */
+nav{
 position:fixed;
 width:100%;
-padding:20px 60px;
+padding:22px 70px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-transition:0.4s;
 z-index:1000;
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(12px);
+transition:all 0.4s ease;
 }
 
-/* ✅ LOGO PREMIUM */
-.logo img {
-height:55px;
+/* Scroll Effect */
+nav.scrolled{
+background:rgba(0,0,0,0.75);
+padding:15px 70px;
+}
+
+/* ===== LOGO ULTRA PREMIUM ===== */
+.logo img{
+height:80px;
 width:auto;
-filter:drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+display:block;
+background:transparent;
+filter:drop-shadow(0 8px 22px rgba(0,0,0,0.45));
+transition:transform 0.4s ease, filter 0.4s ease;
 }
 
+.logo img:hover{
+transform:scale(1.07);
+filter:drop-shadow(0 12px 30px rgba(0,0,0,0.6));
+}
+
+/* ===== LANGUAGE BUTTONS ===== */
 .lang-switch button{
 margin-left:10px;
-padding:6px 12px;
-border-radius:20px;
+padding:7px 16px;
+border-radius:25px;
 border:none;
+background:rgba(255,255,255,0.9);
 cursor:pointer;
 font-weight:500;
+transition:all 0.3s ease;
 }
 
-/* HERO */
-.hero {
+.lang-switch button:hover{
+background:#111;
+color:white;
+}
+
+/* ===== HERO ===== */
+.hero{
 height:100vh;
-background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('hidden gem.jpg') center/cover no-repeat;
+background:linear-gradient(rgba(15,35,20,0.6),rgba(15,35,20,0.6)),url('hidden gem.jpg') center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -51,18 +75,23 @@ text-align:center;
 color:white;
 padding:0 20px;
 }
-.hero h1 {
+
+.hero h1{
 font-family:'Playfair Display',serif;
-font-size:55px;
+font-size:65px;
 margin-bottom:20px;
+letter-spacing:1px;
 }
-.hero p {
-font-size:20px;
-margin-bottom:30px;
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+font-weight:300;
 }
-.btn {
-padding:14px 35px;
-border-radius:30px;
+
+.btn{
+padding:15px 40px;
+border-radius:40px;
 border:none;
 background:#d6e5d8;
 color:#1e2a1f;
@@ -70,76 +99,105 @@ font-weight:500;
 cursor:pointer;
 text-decoration:none;
 display:inline-block;
+transition:all 0.3s ease;
 }
 
-.section {padding:100px 12%;}
-.section h2 {
+.btn:hover{
+background:white;
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== SECTIONS ===== */
+.section{padding:110px 12%;}
+.section h2{
 font-family:'Playfair Display',serif;
-font-size:40px;
-margin-bottom:30px;
+font-size:42px;
+margin-bottom:35px;
 text-align:center;
 }
 
-.two-col {
+.two-col{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
 }
-.two-col img {
+
+.two-col img{
 width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.18);
+transition:transform 0.4s ease;
 }
 
-.gallery {
+.two-col img:hover{
+transform:scale(1.03);
+}
+
+.gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-.gallery img {
+
+.gallery img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
-border-radius:15px;
+border-radius:18px;
+transition:transform 0.4s ease;
 }
 
-footer {
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+footer{
 background:#1f2e20;
 color:#ccc;
 text-align:center;
-padding:30px;
-margin-top:60px;
+padding:35px;
+margin-top:80px;
+font-size:14px;
+letter-spacing:1px;
 }
 
-.line-btn {
+/* ===== FLOATING LINE BUTTON ===== */
+.line-btn{
 position:fixed;
 bottom:25px;
 right:25px;
 background:#06c755;
 color:white;
-padding:15px 22px;
+padding:16px 25px;
 border-radius:50px;
 text-decoration:none;
 font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:all 0.3s ease;
 }
 
+.line-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 30px rgba(0,0,0,0.3);
+}
+
+/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
-.two-col {grid-template-columns:1fr;}
-.hero h1 {font-size:38px;}
-nav {padding:15px 25px;}
-.logo img {height:45px;}
+.two-col{grid-template-columns:1fr;}
+.hero h1{font-size:42px;}
+nav{padding:15px 25px;}
+.logo img{height:60px;}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
+<nav id="navbar">
 <div class="logo">
-  <!-- ✅ ใส่ไฟล์โลโก้ไว้ในโฟลเดอร์เดียวกับไฟล์นี้ -->
-  <img src="logo.png" alt="Khao Kho Empire Logo">
+<img src="logo.png" alt="Khao Kho Empire Logo">
 </div>
 
 <div class="lang-switch">
@@ -161,7 +219,7 @@ nav {padding:15px 25px;}
 <h2 id="about-title"></h2>
 <div class="two-col">
 <div>
-<p id="about-text" style="line-height:1.8;font-size:18px;"></p>
+<p id="about-text" style="line-height:1.9;font-size:18px;"></p>
 </div>
 <div>
 <img src="villa1.jpg">
@@ -176,7 +234,7 @@ nav {padding:15px 25px;}
 </div>
 <div>
 <h2 id="invest-title"></h2>
-<p id="invest-text" style="line-height:1.8;font-size:18px;"></p>
+<p id="invest-text" style="line-height:1.9;font-size:18px;"></p>
 </div>
 </div>
 </section>
@@ -190,10 +248,9 @@ nav {padding:15px 25px;}
 </div>
 </section>
 
-<!-- ✅ เหลือแผนที่ไว้เฉพาะท้ายเว็บ -->
 <section class="section">
 <h2>Project Location</h2>
-<div style="border-radius:20px; overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,0.15);">
+<div style="border-radius:25px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.18);">
 <iframe 
 src="https://www.google.com/maps?q=16.621000,101.041889&hl=en&z=15&output=embed"
 width="100%" 
@@ -214,47 +271,57 @@ loading="lazy">
 </a>
 
 <script>
-const content = {
+const content={
 en:{
 heroTitle:"Khao Kho Empire",
 heroSub:"Luxury Mountain Land & Pool Villa House",
 heroBtn:"Private Consultation",
 aboutTitle:"About The Estate",
-aboutText:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.",
+aboutText:"Exclusive mountain land plots from 100 sq.wah to 100+ rai, suitable for private estates, luxury villas and boutique resorts.",
 investTitle:"Investment Vision",
-investText:"Strategically positioned for luxury villa development and boutique resorts."
+investText:"Strategically positioned for high-end development in Khao Kho, Phetchabun — ideal for Thai and international investors."
 },
 th:{
 heroTitle:"Khao Kho Empire",
 heroSub:"ที่ดินภูเขาและพูลวิลล่าระดับลักชัวรี",
-heroBtn:"ติดต่อเรา",
+heroBtn:"ติดต่อที่ปรึกษาส่วนตัว",
 aboutTitle:"เกี่ยวกับโครงการ",
-aboutText:"ที่ดินวิวภูเขา อากาศเย็นตลอดปี เหมาะสำหรับการพัฒนาโครงการระดับพรีเมียม",
+aboutText:"ที่ดินวิวภูเขาหลากหลายขนาด ตั้งแต่ 100 ตารางวา ถึง 100 กว่าไร่ เหมาะสำหรับบ้านพักตากอากาศและโครงการระดับพรีเมียม",
 investTitle:"วิสัยทัศน์การลงทุน",
-investText:"รองรับการพัฒนา Pool Villa และโครงการหรู"
+investText:"ทำเลศักยภาพสูงในเขาค้อ เพชรบูรณ์ รองรับนักลงทุนไทยและต่างชาติ"
 },
 cn:{
 heroTitle:"Khao Kho Empire",
 heroSub:"高端山地土地与豪华泳池别墅",
-heroBtn:"联系我们",
+heroBtn:"预约私人咨询",
 aboutTitle:"项目介绍",
-aboutText:"位于纯净山景之中，全年气候凉爽。",
+aboutText:"土地面积从100平方哇至100多莱，适合开发豪华别墅及精品度假项目。",
 investTitle:"投资愿景",
-investText:"适合开发豪华别墅及精品度假项目。"
+investText:"位于泰国碧差汶府考柯核心地段，适合国内外投资者。"
 }
 };
 
 function setLang(lang){
-document.getElementById("hero-title").innerText = content[lang].heroTitle;
-document.getElementById("hero-sub").innerText = content[lang].heroSub;
-document.getElementById("hero-btn").innerText = content[lang].heroBtn;
-document.getElementById("about-title").innerText = content[lang].aboutTitle;
-document.getElementById("about-text").innerText = content[lang].aboutText;
-document.getElementById("invest-title").innerText = content[lang].investTitle;
-document.getElementById("invest-text").innerText = content[lang].investText;
+document.getElementById("hero-title").innerText=content[lang].heroTitle;
+document.getElementById("hero-sub").innerText=content[lang].heroSub;
+document.getElementById("hero-btn").innerText=content[lang].heroBtn;
+document.getElementById("about-title").innerText=content[lang].aboutTitle;
+document.getElementById("about-text").innerText=content[lang].aboutText;
+document.getElementById("invest-title").innerText=content[lang].investTitle;
+document.getElementById("invest-text").innerText=content[lang].investText;
 }
 
 setLang('en');
+
+/* Navbar Scroll Effect */
+window.addEventListener("scroll",function(){
+const nav=document.getElementById("navbar");
+if(window.scrollY>50){
+nav.classList.add("scrolled");
+}else{
+nav.classList.remove("scrolled");
+}
+});
 </script>
 
 </body>
