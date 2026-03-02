@@ -1,164 +1,177 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khao Kho Empire</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f0;
-    color: #2e3d2f;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  padding: 15px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f6f6f2;
+    color: #2f3e2e;
 }
 
-.navbar .logo {
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-}
+/* NAVBAR */
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-/* ===== HERO ===== */
-header {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url('land.jpg') no-repeat center center/cover;
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background: rgba(34, 49, 34, 0.95);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
     color: white;
 }
 
-header h1 {
-    font-size: 48px;
-    margin: 0;
+/* HERO */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(20,40,20,0.5), rgba(20,40,20,0.5)), url('land.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: white;
-    color: #2e3d2f;
-    text-decoration: none;
+    padding: 14px 35px;
     border-radius: 30px;
-    font-weight: bold;
+    border: none;
+    background: #d6e5d8;
+    color: #1e2a1f;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* ===== SECTIONS ===== */
-section {
-    padding: 80px 20px;
+.btn:hover {
+    background: #b7d1bb;
+}
+
+/* SECTION */
+
+.section {
+    padding: 100px 15%;
     text-align: center;
 }
 
-#project img {
-    width: 80%;
-    max-width: 900px;
-    border-radius: 15px;
-    margin-top: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
-/* ===== CONTACT BUTTON ===== */
-.line-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background: #00c300;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+.section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
+
 footer {
-    background: #2e3d2f;
-    color: white;
-    padding: 30px;
+    background: #1f2e20;
+    color: #ccc;
     text-align: center;
+    padding: 30px;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="logo">Khao Kho Empire</div>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#project">Project</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav id="navbar">
+    <div class="logo">Khao Kho Empire</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#investment">Investment</a>
+    </div>
 </nav>
 
-<header>
+<section class="hero">
     <div>
         <h1>Khao Kho Empire</h1>
-        <p>Luxury Mountain Land & Pool Villa</p>
-        <a href="#contact" class="btn">Contact Us</a>
+        <p>Luxury Mountain Land & Private Pool Villa Estate</p>
+        <button class="btn">Contact Us</button>
     </div>
-</header>
-
-<section>
-    <h2>Own the Mountain. Live Above the Clouds.</h2>
-    <p>ที่ดินวิวทะเลหมอก เหมาะสำหรับพัฒนา Pool Villa และ Wellness Retreat</p>
 </section>
 
-<section id="project">
-  <h2>Project Overview</h2>
-  <p>Prime mountain land with panoramic mist views.</p>
-
-  <img src="land.jpg" alt="Khao Kho Land">
+<section id="about" class="section">
+    <h2>About The Project</h2>
+    <p>
+        Nestled in the pristine mountains of Khao Kho, this exclusive estate offers 
+        panoramic views, cool climate, and ultimate privacy. Designed for visionary 
+        investors seeking long-term capital growth in Thailand’s emerging wellness 
+        and luxury destination.
+    </p>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Line ID: 0957019505</p>
-
-    <a href="https://line.me/ti/p/~0957019505" class="line-btn">
-        Chat via LINE
-    </a>
+<section id="investment" class="section" style="background:#e8efe8;">
+    <h2>Investment Opportunity</h2>
+    <p>
+        Positioned as a future luxury wellness capital, Khao Kho Empire combines 
+        natural beauty with strategic development potential. Ideal for high-end 
+        villa projects, boutique resorts, or private family estates.
+    </p>
 </section>
 
 <footer>
-    © 2026 Khao Kho Empire
+    © 2026 Khao Kho Empire. All Rights Reserved.
 </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    let navbar = document.getElementById("navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
