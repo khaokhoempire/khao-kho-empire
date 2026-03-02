@@ -11,8 +11,43 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f0;
     color: #2e3d2f;
+    scroll-behavior: smooth;
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ===== HERO ===== */
 header {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
@@ -25,35 +60,72 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 48px;
     margin: 0;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
+    margin-top: 25px;
+    padding: 12px 30px;
     background: white;
     color: #2e3d2f;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
+/* ===== SECTIONS ===== */
 section {
-    padding: 50px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
+#project img {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== CONTACT BUTTON ===== */
+.line-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #00c300;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
 footer {
     background: #2e3d2f;
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 </style>
 </head>
 
 <body>
+
+<nav class="navbar">
+  <div class="logo">Khao Kho Empire</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
 <header>
     <div>
@@ -68,9 +140,23 @@ footer {
     <p>ที่ดินวิวทะเลหมอก เหมาะสำหรับพัฒนา Pool Villa และ Wellness Retreat</p>
 </section>
 
+<section id="project">
+  <h2>Project Overview</h2>
+  <p>Prime mountain land with panoramic mist views.</p>
+
+  <!-- เปลี่ยนชื่อไฟล์หลังอัปโหลด -->
+  <img src="land.jpg" alt="Khao Kho Land">
+  
+  <!-- ใส่ Google Map iframe ตรงนี้ได้ -->
+</section>
+
 <section id="contact">
     <h2>Contact</h2>
     <p>Line ID: 0957019505</p>
+
+    <a href="https://line.me/ti/p/~0957019505" class="line-btn">
+        Chat via LINE
+    </a>
 </section>
 
 <footer>
