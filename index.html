@@ -8,233 +8,185 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
-html {scroll-behavior:smooth;}
-body {font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
-
-/* NAVBAR */
-nav {
-position:fixed;
-width:100%;
-padding:20px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-transition:0.4s;
-z-index:1000;
-}
-nav.scrolled {background:rgba(34,49,34,0.95);}
-nav a {text-decoration:none;color:white;margin-left:30px;}
-.logo {font-family:'Playfair Display',serif;font-size:22px;color:white;}
-
-/* HERO */
-.hero {
-height:100vh;
-background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('land.jpg') center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:0 20px;
-}
-.hero h1 {
-font-family:'Playfair Display',serif;
-font-size:60px;
-margin-bottom:20px;
-}
-.hero p {
-font-size:20px;
-margin-bottom:30px;
-}
-.btn {
-padding:14px 35px;
-border-radius:30px;
-border:none;
-background:#d6e5d8;
-color:#1e2a1f;
-font-weight:500;
-cursor:pointer;
-transition:0.3s;
-}
-.btn:hover {background:#b7d1bb;}
-
-/* SECTION */
-.section {padding:100px 12%;}
-.section h2 {
-font-family:'Playfair Display',serif;
-font-size:40px;
-margin-bottom:30px;
-text-align:center;
+body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background:#f5f5f2;
+    color:#1e2d24;
 }
 
-/* FADE ANIMATION */
-.fade {
-opacity:0;
-transform:translateY(30px);
-transition:1s ease;
-}
-.fade.show {
-opacity:1;
-transform:translateY(0);
-}
-
-/* 2 COLUMN */
-.two-col {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-.two-col img {
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+header{
+    background:#1f3a2e;
+    color:white;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
-/* GALLERY */
-.gallery {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-.gallery img {
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
-transition:0.4s;
-}
-.gallery img:hover {
-transform:scale(1.05);
+header h1{
+    font-family:'Playfair Display', serif;
+    margin:0;
 }
 
-/* FOOTER */
-footer {
-background:#1f2e20;
-color:#ccc;
-text-align:center;
-padding:30px;
-margin-top:60px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:300;
 }
 
-/* LINE BUTTON */
-.line-btn {
-position:fixed;
-bottom:25px;
-right:25px;
-background:#06c755;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-text-decoration:none;
-font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-transition:0.3s;
-animation:pulse 2.5s infinite;
-}
-.line-btn:hover {
-background:#05b34d;
+.lang-btn{
+    background:white;
+    color:#1f3a2e;
+    border:none;
+    padding:5px 12px;
+    margin-left:10px;
+    cursor:pointer;
+    border-radius:20px;
 }
 
-@keyframes pulse {
-0% {box-shadow:0 0 0 0 rgba(6,199,85,0.6);}
-70% {box-shadow:0 0 0 15px rgba(6,199,85,0);}
-100% {box-shadow:0 0 0 0 rgba(6,199,85,0);}
+.hero{
+    padding:120px 10%;
+    background:linear-gradient(rgba(31,58,46,0.6),rgba(31,58,46,0.6)),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;
+    color:white;
+    text-align:center;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-.two-col {grid-template-columns:1fr;}
-.hero h1 {font-size:40px;}
+.hero h2{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+section h2{
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+}
+
+.line-btn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    background:#06C755;
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:500;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 </style>
 </head>
 
 <body>
 
-<nav id="navbar">
-<div class="logo">Khao Kho Empire</div>
-<div>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-</div>
-</nav>
-
-<section class="hero">
-<div>
+<header>
 <h1>Khao Kho Empire</h1>
-<p>Luxury Mountain Land & Private Pool Villa Estate</p>
-<button class="btn">Private Consultation</button>
+<div>
+<button class="lang-btn" onclick="setLang('en')">EN</button>
+<button class="lang-btn" onclick="setLang('th')">TH</button>
+</div>
+</header>
+
+<div class="hero">
+<h2 id="hero-title"></h2>
+<p id="hero-sub"></p>
+</div>
+
+<section>
+<h2 id="land-title"></h2>
+<p id="land-desc"></p>
+</section>
+
+<section>
+<h2 id="dev-title"></h2>
+<div class="grid">
+<div class="card" id="dev1"></div>
+<div class="card" id="dev2"></div>
+<div class="card" id="dev3"></div>
 </div>
 </section>
 
-<section id="about" class="section fade">
-<h2>About The Estate</h2>
-<div class="two-col">
-<div>
-<p style="line-height:1.8;font-size:18px;">
-Nestled in pristine mountain landscapes, Khao Kho Empire offers panoramic views,
-cool climate, and absolute privacy. Designed for visionary investors and families
-seeking a premium lifestyle destination.
-</p>
-</div>
-<div>
-<img src="villa1.jpg">
-</div>
-</div>
-</section>
-
-<section class="section fade" style="background:#e8efe8;">
-<div class="two-col">
-<div>
-<img src="villa2.jpg">
-</div>
-<div>
-<h2>Investment Vision</h2>
-<p style="line-height:1.8;font-size:18px;">
-Strategically positioned for luxury villa development, boutique resorts,
-and wellness retreats. A rare opportunity in Thailand’s emerging
-high-end mountain market.
-</p>
-</div>
-</div>
-</section>
-
-<section id="gallery" class="section fade">
+<section class="gallery">
 <h2>Luxury Gallery</h2>
-<div class="gallery">
-<img src="gallery1.jpg">
-<img src="gallery2.jpg">
-<img src="gallery3.jpg">
+<div class="grid">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3">
 </div>
 </section>
 
-<footer>
-© 2026 Khao Kho Empire. All Rights Reserved.
-</footer>
-
-<a href="https://line.me/R/ti/p/@venusproperty" target="_blank" class="line-btn">
-💬 Add LINE Official
+<a class="line-btn" href="https://line.me/R/ti/p/@venusproperty" target="_blank">
+Add LINE Official
 </a>
 
 <script>
-window.addEventListener("scroll", function(){
-let navbar=document.getElementById("navbar");
-navbar.classList.toggle("scrolled",window.scrollY>50);
-});
 
-const faders=document.querySelectorAll(".fade");
-const appearOptions={threshold:0.2};
-const appearOnScroll=new IntersectionObserver(function(entries,observer){
-entries.forEach(entry=>{
-if(!entry.isIntersecting){return;}
-entry.target.classList.add("show");
-observer.unobserve(entry.target);
-});
-},appearOptions);
-faders.forEach(fader=>{appearOnScroll.observe(fader);});
+const content = {
+en:{
+heroTitle:"Strategic Mountain Land & Luxury Development Opportunity",
+heroSub:"Land parcels from 100 sq.wah to 100+ Rai in Khao Kho, Phetchabun",
+landTitle:"Land Portfolio",
+landDesc:"Flexible land sizes suitable for private villas, boutique resorts, wellness retreats, and large-scale integrated developments.",
+devTitle:"Development Possibilities",
+dev1:"Luxury Pool Villa Development",
+dev2:"Boutique Resort & Wellness Retreat",
+dev3:"Strategic Land Banking Opportunity"
+},
+th:{
+heroTitle:"โอกาสการพัฒนาที่ดินภูเขาระดับพรีเมียม เขาค้อ เพชรบูรณ์",
+heroSub:"ที่ดินตั้งแต่ 100 ตารางวา ถึงมากกว่า 100 ไร่",
+landTitle:"รูปแบบที่ดิน",
+landDesc:"มีขนาดหลากหลาย รองรับการพัฒนา Pool Villa รีสอร์ท บูทีคโฮเทล และโครงการขนาดใหญ่",
+devTitle:"แนวทางการพัฒนา",
+dev1:"พัฒนา Luxury Pool Villa",
+dev2:"รีสอร์ทและศูนย์ Wellness",
+dev3:"โอกาสสะสมที่ดินเชิงกลยุทธ์"
+}
+};
+
+function setLang(lang){
+document.getElementById("hero-title").innerText = content[lang].heroTitle;
+document.getElementById("hero-sub").innerText = content[lang].heroSub;
+document.getElementById("land-title").innerText = content[lang].landTitle;
+document.getElementById("land-desc").innerText = content[lang].landDesc;
+document.getElementById("dev-title").innerText = content[lang].devTitle;
+document.getElementById("dev1").innerText = content[lang].dev1;
+document.getElementById("dev2").innerText = content[lang].dev2;
+document.getElementById("dev3").innerText = content[lang].dev3;
+}
+
+setLang('en');
+
 </script>
 
 </body>
