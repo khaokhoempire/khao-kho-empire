@@ -23,8 +23,6 @@ align-items:center;
 transition:0.4s;
 z-index:1000;
 }
-nav.scrolled {background:rgba(34,49,34,0.95);}
-nav a {text-decoration:none;color:white;margin-left:25px;}
 .logo {font-family:'Playfair Display',serif;font-size:22px;color:white;}
 
 .lang-switch button{
@@ -137,7 +135,7 @@ nav {padding:15px 25px;}
 
 <body>
 
-<nav id="navbar">
+<nav>
 <div class="logo">Khao Kho Empire</div>
 
 <div class="lang-switch">
@@ -151,7 +149,10 @@ nav {padding:15px 25px;}
 <div>
 <h1 id="hero-title"></h1>
 <p id="hero-sub"></p>
-<a href="https://line.me/R/ti/p/@venusproperty" target="_blank" class="btn" id="hero-btn"></a>
+
+<!-- ✅ ปุ่มลิงก์ LINE แก้แล้ว -->
+<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="btn" id="hero-btn"></a>
+
 </div>
 </section>
 
@@ -179,6 +180,21 @@ nav {padding:15px 25px;}
 </div>
 </section>
 
+<!-- ✅ เพิ่ม Google Map พิกัดจริง -->
+<section class="section">
+<h2>Project Location</h2>
+<div style="border-radius:20px; overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,0.15);">
+<iframe 
+src="https://www.google.com/maps?q=16.620998,101.041897&hl=en&z=15&output=embed"
+width="100%" 
+height="450" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+</div>
+</section>
+
 <section class="section">
 <h2>Luxury Gallery</h2>
 <div class="gallery">
@@ -192,7 +208,7 @@ nav {padding:15px 25px;}
 © 2026 Khao Kho Empire. All Rights Reserved.
 </footer>
 
-<a href="https://line.me/R/ti/p/@venusproperty" target="_blank" class="line-btn">
+<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="line-btn">
 💬 Add LINE Official
 </a>
 
@@ -204,9 +220,9 @@ heroTitle:"Khao Kho Empire",
 heroSub:"Luxury Mountain Land & Pool Villa House",
 heroBtn:"Private Consultation",
 aboutTitle:"About The Estate",
-aboutText:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round. Ideal for visionary investors and luxury lifestyle seekers.",
+aboutText:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.",
 investTitle:"Investment Vision",
-investText:"Strategically positioned for luxury villa development, boutique resorts and wellness retreats."
+investText:"Strategically positioned for luxury villa development and boutique resorts."
 },
 
 th:{
@@ -216,7 +232,7 @@ heroBtn:"ติดต่อเรา",
 aboutTitle:"เกี่ยวกับโครงการ",
 aboutText:"ที่ดินวิวภูเขา อากาศเย็นตลอดปี เหมาะสำหรับการพัฒนาโครงการระดับพรีเมียม",
 investTitle:"วิสัยทัศน์การลงทุน",
-investText:"รองรับการพัฒนา Pool Villa และโครงการหรูในอนาคต"
+investText:"รองรับการพัฒนา Pool Villa และโครงการหรู"
 },
 
 cn:{
@@ -224,7 +240,7 @@ heroTitle:"Khao Kho Empire",
 heroSub:"高端山地土地与豪华泳池别墅",
 heroBtn:"联系我们",
 aboutTitle:"项目介绍",
-aboutText:"位于纯净山景之中，全年气候凉爽，适合高端开发。",
+aboutText:"位于纯净山景之中，全年气候凉爽。",
 investTitle:"投资愿景",
 investText:"适合开发豪华别墅及精品度假项目。"
 }
