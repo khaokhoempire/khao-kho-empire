@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khao Kho Empire</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -33,10 +33,32 @@ text-decoration:none;
 font-size:22px;
 }
 
+.nav-right{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
 .nav-links a{
 color:white;
 text-decoration:none;
-margin-left:30px;
+margin-left:25px;
+}
+
+.lang-switch button{
+background:transparent;
+border:1px solid white;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+cursor:pointer;
+font-size:12px;
+margin-left:5px;
+}
+
+.lang-switch button:hover{
+background:white;
+color:black;
 }
 
 /* HERO */
@@ -57,10 +79,12 @@ font-size:55px;
 margin-bottom:20px;
 }
 
-.section{
-padding:120px 12%;
+.hero p{
+font-size:20px;
 }
 
+/* SECTION */
+.section{padding:120px 12%;}
 .section h2{
 font-family:'Playfair Display',serif;
 font-size:40px;
@@ -68,8 +92,21 @@ text-align:center;
 margin-bottom:40px;
 }
 
-/* ===== PROFESSIONAL SLIDER ===== */
+/* ABOUT */
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
 
+.two-col img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* SLIDER */
 .slider{
 position:relative;
 max-width:1200px;
@@ -91,8 +128,7 @@ height:520px;
 object-fit:cover;
 }
 
-/* Buttons */
-.prev, .next{
+.prev,.next{
 position:absolute;
 top:50%;
 transform:translateY(-50%);
@@ -103,22 +139,32 @@ padding:15px 20px;
 cursor:pointer;
 font-size:22px;
 border-radius:50%;
-transition:0.3s;
-}
-
-.prev:hover, .next:hover{
-background:#1e2a1f;
 }
 
 .prev{left:20px;}
 .next{right:20px;}
 
+.contact-section{
+background:#e8efe8;
+padding:100px 12%;
+text-align:center;
+}
+
+footer{
+background:#1f2e20;
+color:#ccc;
+text-align:center;
+padding:30px;
+}
+
 /* MOBILE */
 @media(max-width:768px){
 .hero h1{font-size:32px;}
 .section{padding:80px 8%;}
+.two-col{grid-template-columns:1fr;}
 .slides img{height:260px;}
-.prev, .next{padding:10px 14px;font-size:18px;}
+.main-nav{flex-direction:column;gap:10px;}
+.nav-right{flex-direction:column;}
 }
 </style>
 </head>
@@ -126,46 +172,65 @@ background:#1e2a1f;
 <body>
 
 <nav class="main-nav">
-<a href="index.html" class="logo">Khao Kho Empire</a>
+<a href="#" class="logo">Khao Kho Empire</a>
+
+<div class="nav-right">
 <div class="nav-links">
-<a href="index.html">Home</a>
-<a href="collections.html">Land Collection</a>
-<a href="investment.html">Investment</a>
-<a href="contact.html">Contact</a>
+<a href="#">Home</a>
+<a href="#">Land</a>
+<a href="#">Investment</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('th')">TH</button>
+<button onclick="setLang('cn')">中文</button>
+</div>
 </div>
 </nav>
 
 <section class="hero">
 <div>
-<h1>Khao Kho Empire</h1>
-<p>Luxury Mountain Land & Pool Villa House</p>
+<h1 id="hero-title">Khao Kho Empire</h1>
+<p id="hero-sub">Luxury Mountain Land & Pool Villa House</p>
+</div>
+</section>
+
+<section class="section">
+<h2 id="about-title">About The Estate</h2>
+<div class="two-col">
+<div>
+<p id="about-text" style="line-height:1.8;font-size:18px;">
+Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.
+</p>
+</div>
+<div>
+<img src="villa1.jpg">
+</div>
 </div>
 </section>
 
 <section class="section">
 <h2>Luxury Gallery</h2>
-
 <div class="slider" id="slider">
 <div class="slides" id="slides">
 <img src="gallery1.jpg">
 <img src="gallery2.jpg">
 <img src="gallery3.jpg">
 <img src="gallery4.jpg">
-<img src="gallery5.jpg">
-<img src="gallery6.jpg">
-<img src="gallery7.jpg">
-<img src="gallery8.jpg">
-<img src="gallery9.jpg">
-<img src="gallery10.jpg">
 </div>
-
 <button class="prev" onclick="prevSlide()">❮</button>
 <button class="next" onclick="nextSlide()">❯</button>
-
 </div>
 </section>
 
-<footer style="background:#1f2e20;color:#ccc;text-align:center;padding:30px;">
+<section class="contact-section">
+<h2 id="contact-title">Private Viewing & Investment Briefing</h2>
+<p id="contact-sub">Connect directly with our land specialist.</p>
+</section>
+
+<footer>
 © 2026 Khao Kho Empire. All Rights Reserved.
 </footer>
 
@@ -188,17 +253,32 @@ currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
 updateSlide();
 }
 
-/* Auto Slide (ช้าและดูโปร) */
-let autoSlide = setInterval(nextSlide, 5000);
+setInterval(nextSlide,5000);
 
-/* Pause on Hover */
-document.getElementById("slider").addEventListener("mouseenter", () => {
-clearInterval(autoSlide);
-});
-
-document.getElementById("slider").addEventListener("mouseleave", () => {
-autoSlide = setInterval(nextSlide, 5000);
-});
+/* LANGUAGE SYSTEM */
+function setLang(lang){
+if(lang==="th"){
+document.getElementById("hero-sub").innerText="ที่ดินภูเขาหรู พร้อมพูลวิลล่า";
+document.getElementById("about-title").innerText="เกี่ยวกับโครงการ";
+document.getElementById("about-text").innerText="ตั้งอยู่ท่ามกลางธรรมชาติ วิวพาโนรามา อากาศเย็นสบายตลอดปี";
+document.getElementById("contact-title").innerText="นัดชมที่ดินส่วนตัว";
+document.getElementById("contact-sub").innerText="ติดต่อผู้เชี่ยวชาญของเราโดยตรง";
+}
+if(lang==="cn"){
+document.getElementById("hero-sub").innerText="高端山景土地与泳池别墅";
+document.getElementById("about-title").innerText="项目介绍";
+document.getElementById("about-text").innerText="坐落于纯净山景之中，全年凉爽气候，全景视野。";
+document.getElementById("contact-title").innerText="私人预约与投资咨询";
+document.getElementById("contact-sub").innerText="直接联系我们的土地顾问";
+}
+if(lang==="en"){
+document.getElementById("hero-sub").innerText="Luxury Mountain Land & Pool Villa House";
+document.getElementById("about-title").innerText="About The Estate";
+document.getElementById("about-text").innerText="Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.";
+document.getElementById("contact-title").innerText="Private Viewing & Investment Briefing";
+document.getElementById("contact-sub").innerText="Connect directly with our land specialist.";
+}
+}
 </script>
 
 </body>
