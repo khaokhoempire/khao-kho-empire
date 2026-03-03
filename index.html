@@ -11,28 +11,41 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 
-/* ===== BODY BACKGROUND (ปรับใหม่) ===== */
-body{
-font-family:'Inter',sans-serif;
-background:#cfd8cf; /* สีพื้นหลังเขียวหม่นหรู */
-color:#2f3e2e;
+/* ========================= */
+/* COLOR SYSTEM (Luxury Tone) */
+/* ========================= */
+:root{
+--primary-bg:#cfd8cf;
+--section-soft:#dbe5db;
+--deep-green:#2f3e2e;
+--text-soft:#4a5a49;
+--card-bg:#ffffff;
+--accent:#d6e5d8;
+--accent-hover:#ffffff;
+--nav-bg:rgba(47,62,46,0.85);
 }
 
-/* ===== GLOBAL CONTAINER ===== */
+/* ===== BODY ===== */
+body{
+font-family:'Inter',sans-serif;
+background:var(--primary-bg);
+color:var(--deep-green);
+}
+
+/* ===== CONTAINER ===== */
 .container{
 max-width:1200px;
 margin:0 auto;
 padding:0 40px;
 }
-
 @media (min-width:1600px){
 .container{max-width:1300px;}
 }
 
-/* ===== SECTION BASE (เพิ่มพื้น Layer อ่อน) ===== */
+/* ===== SECTION ===== */
 .section{
 padding:120px 0;
-background:#cfd8cf; /* สีพื้นหลังเขียวหม่นหรู */
+background:var(--primary-bg);
 }
 
 .section h2{
@@ -40,46 +53,7 @@ font-family:'Playfair Display',serif;
 font-size:40px;
 margin-bottom:30px;
 text-align:center;
-}
-
-/* ========================= */
-/* INVESTMENT VISION SECTION */
-/* ========================= */
-
-.investment-section{
-background:#cfd8cf;
-padding:140px 0;
-}
-
-.investment-wrapper{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:80px;
-}
-
-.investment-image img{
-width:100%;
-max-width:700px;
-border-radius:30px;
-box-shadow:0 30px 60px rgba(0,0,0,0.15);
-}
-
-.investment-content{
-max-width:500px;
-}
-
-.investment-content h2{
-font-family:'Playfair Display', serif;
-font-size:52px;
-margin-bottom:25px;
-color:#2f3e2e;
-}
-
-.investment-content p{
-font-size:20px;
-line-height:1.8;
-color:#3e4e3d;
+color:var(--deep-green);
 }
 
 /* ===== NAVBAR ===== */
@@ -91,7 +65,7 @@ width:100%;
 padding:22px 40px;
 display:flex;
 justify-content:center;
-background:rgba(0,0,0,0.35);
+background:var(--nav-bg);
 backdrop-filter:blur(14px);
 z-index:1000;
 }
@@ -129,7 +103,7 @@ transition:0.3s;
 margin-left:10px;
 padding:8px 16px;
 border-radius:30px;
-border:1px solid rgba(255,255,255,0.5);
+border:1px solid rgba(255,255,255,0.6);
 background:transparent;
 color:white;
 cursor:pointer;
@@ -139,13 +113,13 @@ transition:0.3s;
 
 .lang-switch button:hover{
 background:white;
-color:#1e2a1f;
+color:var(--deep-green);
 }
 
 /* ===== HERO ===== */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('hidden gem.jpg') center/cover no-repeat;
+background:linear-gradient(rgba(47,62,46,0.55),rgba(47,62,46,0.55)),url('hidden gem.jpg') center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -165,12 +139,13 @@ font-size:20px;
 margin-bottom:30px;
 }
 
+/* ===== BUTTON ===== */
 .btn{
 padding:14px 35px;
 border-radius:30px;
 border:none;
-background:#d6e5d8;
-color:#1e2a1f;
+background:var(--accent);
+color:var(--deep-green);
 font-weight:500;
 cursor:pointer;
 text-decoration:none;
@@ -178,7 +153,7 @@ display:inline-block;
 transition:0.3s;
 }
 
-.btn:hover{background:#ffffff;}
+.btn:hover{background:var(--accent-hover);}
 
 /* ===== TWO COLUMN ===== */
 .two-col{
@@ -194,15 +169,47 @@ border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* =============================== */
-/* INVESTMENT PURPOSE SECTION */
-/* =============================== */
+/* ===== INVESTMENT SECTION ===== */
+.investment-section{
+background:var(--section-soft);
+padding:140px 0;
+}
 
+.investment-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+}
+
+.investment-image img{
+width:100%;
+max-width:700px;
+border-radius:30px;
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+.investment-content{
+max-width:500px;
+}
+
+.investment-content h2{
+font-family:'Playfair Display', serif;
+font-size:52px;
+margin-bottom:25px;
+color:var(--deep-green);
+}
+
+.investment-content p{
+font-size:20px;
+line-height:1.8;
+color:var(--text-soft);
+}
+
+/* ===== PURPOSE SECTION ===== */
 .purpose-section{
-position:relative;
 padding:160px 0;
-background:linear-gradient(rgba(230,239,230,0.85),rgba(230,239,230,0.85)),
-url('mountain-bg.jpg') center/cover no-repeat;
+background:var(--primary-bg);
 text-align:center;
 }
 
@@ -210,14 +217,14 @@ text-align:center;
 font-family:'Playfair Display',serif;
 font-size:48px;
 margin-bottom:20px;
-color:#2f3e2e;
+color:var(--deep-green);
 }
 
 .purpose-sub{
 max-width:700px;
 margin:0 auto 90px auto;
 font-size:20px;
-color:#4a5a49;
+color:var(--text-soft);
 }
 
 .purpose-grid{
@@ -227,7 +234,7 @@ gap:50px;
 }
 
 .purpose-card{
-background:white;
+background:var(--card-bg);
 border-radius:28px;
 overflow:hidden;
 box-shadow:0 30px 60px rgba(0,0,0,0.12);
@@ -256,7 +263,7 @@ margin-bottom:15px;
 }
 
 .purpose-content p{
-color:#5a6a59;
+color:var(--text-soft);
 margin-bottom:25px;
 line-height:1.7;
 }
@@ -265,29 +272,15 @@ line-height:1.7;
 display:inline-block;
 padding:14px 32px;
 border-radius:30px;
-background:#e6e2d8;
-color:#2f3e2e;
+background:var(--accent);
+color:var(--deep-green);
 text-decoration:none;
 font-weight:500;
 transition:0.3s;
 }
 
 .purpose-btn:hover{
-background:#d8d3c8;
-}
-
-/* Responsive */
-@media(max-width:1024px){
-.purpose-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:768px){
-.purpose-grid{
-grid-template-columns:1fr;
-}
-.purpose-title{font-size:36px;}
+background:var(--accent-hover);
 }
 
 /* ===== GALLERY ===== */
@@ -318,7 +311,7 @@ box-shadow:0 15px 40px rgba(0,0,0,0.15);
 
 /* ===== FOOTER ===== */
 footer{
-background:#1f2e20;
+background:var(--deep-green);
 color:#ccc;
 text-align:center;
 padding:30px;
@@ -342,11 +335,13 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
 .gallery{grid-template-columns:repeat(2,1fr);}
+.purpose-grid{grid-template-columns:repeat(2,1fr);}
 }
 
 @media(max-width:768px){
 .section{padding:70px 0;}
 .gallery{grid-template-columns:repeat(2,1fr);}
+.purpose-grid{grid-template-columns:1fr;}
 }
 
 @media(max-width:480px){
@@ -354,173 +349,3 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 </style>
 </head>
-
-<body>
-
-<header class="main-nav">
-<div class="main-nav-inner">
-<a href="index.html" class="logo">Khao Kho Empire</a>
-<div style="display:flex;align-items:center;gap:40px;">
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="collections.html">Collections</a>
-<a href="investment.html">Investment</a>
-<a href="contact.html">Contact</a>
-</div>
-<div class="lang-switch">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('th')">TH</button>
-<button onclick="setLang('cn')">中文</button>
-</div>
-</div>
-</div>
-</header>
-
-<section class="hero">
-<div class="container">
-<h1 id="hero-title"></h1>
-<p id="hero-sub"></p>
-<a href="#" class="btn" id="hero-btn"></a>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<h2 id="about-title"></h2>
-<div class="two-col">
-<div><p id="about-text"></p></div>
-<div><img src="villa1.jpg" alt=""></div>
-</div>
-</div>
-</section>
-
-<section class="investment-section">
-<div class="container investment-wrapper">
-<div class="investment-image">
-<img src="villa2.jpg" alt="Luxury Villa Development">
-</div>
-<div class="investment-content">
-<h2>Investment Vision</h2>
-<p>Strategically positioned for luxury villa development and boutique resorts.</p>
-</div>
-</div>
-</section>
-
-<section class="purpose-section">
-<div class="container">
-
-<h2 class="purpose-title">Choose Your Investment Purpose</h2>
-<p class="purpose-sub">
-Tailor your investment vision by selecting the perfect land plot fit your unique goals.
-</p>
-
-<div class="purpose-grid">
-
-<div class="purpose-card">
-<img src="residence.jpg" alt="">
-<div class="purpose-content">
-<h3>Residence</h3>
-<p>Perfect for private pool villa or mountain retreat.</p>
-<a href="#" class="purpose-btn">Explore Residential Plots</a>
-</div>
-</div>
-
-<div class="purpose-card">
-<img src="development.jpg" alt="">
-<div class="purpose-content">
-<h3>Development</h3>
-<p>Ideal for boutique resort or luxury development.</p>
-<a href="#" class="purpose-btn">Explore Development Land</a>
-</div>
-</div>
-
-<div class="purpose-card">
-<img src="holding.jpg" alt="">
-<div class="purpose-content">
-<h3>Long-Term Holding</h3>
-<p>Strategic land banking opportunity with long-term growth.</p>
-<a href="#" class="purpose-btn">Explore Investment Plots</a>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-  
-<section class="section">
-<div class="container">
-<h2>Luxury Gallery</h2>
-<div class="gallery">
-<img src="gallery1.jpg">
-<img src="gallery2.jpg">
-<img src="gallery3.jpg">
-<img src="gallery4.jpg">
-<img src="gallery5.jpg">
-<img src="gallery6.jpg">
-<img src="gallery7.jpg">
-<img src="gallery8.jpg">
-<img src="gallery9.jpg">
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<h2>Project Location</h2>
-<div class="map-container">
-<iframe src="https://www.google.com/maps?q=16.621000,101.041889&hl=en&z=15&output=embed"
-width="100%" height="450" style="border:0;" allowfullscreen loading="lazy">
-</iframe>
-</div>
-</div>
-</section>
-
-<footer>
-© 2026 Khao Kho Empire. All Rights Reserved.
-</footer>
-
-<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="line-btn">
-💬 Add LINE Official
-</a>
-
-<script>
-const content={
-en:{
-heroTitle:"Khao Kho Empire",
-heroSub:"Luxury Mountain Land & Pool Villa House",
-heroBtn:"Private Consultation",
-heroLink:"consultant-en.html",
-aboutTitle:"About The Estate",
-aboutText:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round."
-},
-th:{
-heroTitle:"Khao Kho Empire",
-heroSub:"ที่ดินภูเขาและพูลวิลล่าระดับลักชัวรี",
-heroBtn:"ปรึกษาโครงการ",
-heroLink:"consultant-th.html",
-aboutTitle:"เกี่ยวกับโครงการ",
-aboutText:"ที่ดินวิวภูเขา อากาศเย็นตลอดปี เหมาะสำหรับการพัฒนาโครงการระดับพรีเมียม"
-},
-cn:{
-heroTitle:"Khao Kho Empire",
-heroSub:"高端山地土地与豪华泳池别墅",
-heroBtn:"私人咨询",
-heroLink:"consultant-cn.html",
-aboutTitle:"项目介绍",
-aboutText:"位于纯净山景之中，全年气候凉爽。"
-}
-};
-
-function setLang(lang){
-document.getElementById("hero-title").innerText=content[lang].heroTitle;
-document.getElementById("hero-sub").innerText=content[lang].heroSub;
-document.getElementById("hero-btn").innerText=content[lang].heroBtn;
-document.getElementById("hero-btn").href=content[lang].heroLink;
-document.getElementById("about-title").innerText=content[lang].aboutTitle;
-document.getElementById("about-text").innerText=content[lang].aboutText;
-}
-setLang('en');
-</script>
-
-</body>
-</html>
