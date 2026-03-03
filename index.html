@@ -1,360 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Khao Kho Empire</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khao Kho Empire</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <style>
-        /* =========================
-           RESET
-        ========================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
-        html { scroll-behavior: smooth; }
+/* ===== GLOBAL CONTAINER ===== */
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 40px;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #cfd8cf;
-            color: #2f3e2e;
-        }
+@media (min-width:1600px){
+.container{max-width:1300px;}
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
+/* ========================= */
+/* INVESTMENT VISION SECTION */
+/* ========================= */
 
-        @media (min-width:1600px){
-            .container { max-width:1300px; }
-        }
+.investment-section{
+  background:#cfd8cf; /* สีพื้นหลังเขียวหม่นหรู */
+  padding:140px 0;
+}
 
-        .section {
-            padding: 120px 0;
-            background: #cfd8cf;
-        }
+.investment-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:80px;
+}
 
-        .section h2 {
-            font-family:'Playfair Display', serif;
-            font-size: 40px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
+.investment-image img{
+  width:100%;
+  max-width:700px;
+  border-radius:30px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
 
-        /* =========================
-           NAVBAR
-        ========================== */
-        .main-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 22px 40px;
-            display: flex;
-            justify-content: center;
-            background: rgba(0,0,0,0.35);
-            backdrop-filter: blur(14px);
-            z-index: 1000;
-        }
+.investment-content{
+  max-width:500px;
+}
 
-        .main-nav-inner {
-            width: 100%;
-            max-width: 1200px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.investment-content h2{
+  font-family:'Playfair Display', serif;
+  font-size:52px;
+  margin-bottom:25px;
+  color:#2f3e2e;
+}
 
-        .logo {
-            font-family:'Playfair Display', serif;
-            color: white;
-            text-decoration: none;
-            font-size: 22px;
-        }
+.investment-content p{
+  font-size:20px;
+  line-height:1.8;
+  color:#3e4e3d;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 35px;
-        }
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            transition: 0.3s;
-        }
+@media(max-width:1000px){
+  .investment-wrapper{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+  }
 
-        .nav-links a:hover { opacity: 0.7; }
+  .investment-content h2{
+    font-size:38px;
+  }
 
-        .lang-switch button {
-            margin-left: 10px;
-            padding: 8px 16px;
-            border-radius: 30px;
-            border: 1px solid rgba(255,255,255,0.5);
-            background: transparent;
-            color: white;
-            cursor: pointer;
-            font-weight: 500;
-            transition: 0.3s;
-        }
+  .investment-image img{
+    max-width:100%;
+  }
+}
 
-        .lang-switch button:hover {
-            background: white;
-            color: #1e2a1f;
-        }
+/* ===== NAVBAR ===== */
+.main-nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 40px;
+display:flex;
+justify-content:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(14px);
+z-index:1000;
+}
 
-        /* =========================
-           HERO
-        ========================== */
-        .hero {
-            height: 100vh;
-            background:
-                linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),
-                url('hidden gem.jpg') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-        }
+.main-nav-inner{
+width:100%;
+max-width:1200px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-        .hero h1 {
-            font-family:'Playfair Display', serif;
-            font-size: 55px;
-            margin-bottom: 20px;
-        }
+.logo{
+font-family:'Playfair Display',serif;
+color:white;
+text-decoration:none;
+font-size:22px;
+}
 
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
+.nav-links{
+display:flex;
+gap:35px;
+}
 
-        .btn {
-            padding: 14px 35px;
-            border-radius: 30px;
-            border: none;
-            background: #d6e5d8;
-            color: #1e2a1f;
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
-        }
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:15px;
+transition:0.3s;
+}
 
-        .btn:hover { background: #ffffff; }
+.nav-links a:hover{opacity:0.7;}
 
-        /* =========================
-           TWO COLUMN
-        ========================== */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
+.lang-switch button{
+margin-left:10px;
+padding:8px 16px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.5);
+background:transparent;
+color:white;
+cursor:pointer;
+font-weight:500;
+transition:0.3s;
+}
 
-        .two-col img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
+.lang-switch button:hover{
+background:white;
+color:#1e2a1f;
+}
 
-        /* =========================
-           GALLERY
-        ========================== */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 20px;
-        }
+/* ===== HERO ===== */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('hidden gem.jpg') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:0 20px;
+}
 
-        .gallery img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 16px;
-            transition: 0.4s ease;
-        }
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:55px;
+margin-bottom:20px;
+}
 
-        .gallery img:hover { transform: scale(1.05); }
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
 
-        /* =========================
-           MAP
-        ========================== */
-        .map-container {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
+.btn{
+padding:14px 35px;
+border-radius:30px;
+border:none;
+background:#d6e5d8;
+color:#1e2a1f;
+font-weight:500;
+cursor:pointer;
+text-decoration:none;
+display:inline-block;
+transition:0.3s;
+}
 
-        /* =========================
-           FOOTER
-        ========================== */
-        footer {
-            background: #1f2e20;
-            color: #ccc;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-        }
+.btn:hover{background:#ffffff;}
 
-        /* =========================
-           LINE BUTTON
-        ========================== */
-        .line-btn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #06c755;
-            color: white;
-            padding: 15px 22px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
+/* ===== SECTION ===== */
+.section{padding:120px 0;}
 
-        /* =========================
-           RESPONSIVE
-        ========================== */
-        @media(max-width:1024px){
-            .gallery { grid-template-columns: repeat(2,1fr); }
-        }
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:30px;
+text-align:center;
+}
 
-        @media(max-width:768px){
-            .section { padding: 70px 0; }
-            .two-col { grid-template-columns: 1fr; }
-            .gallery { grid-template-columns: repeat(2,1fr); }
-        }
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
 
-        @media(max-width:480px){
-            .gallery { grid-template-columns: 1fr; }
-        }
+.two-col img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
 
-    </style>
+/* ===== PURPOSE SECTION ===== */
+.purpose-section{
+padding:140px 0;
+background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
+text-align:center;
+}
+
+.purpose-title{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.purpose-sub{
+max-width:600px;
+margin:0 auto 70px auto;
+color:#666;
+font-size:17px;
+}
+
+.purpose-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.purpose-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+transition:0.4s ease;
+}
+
+.purpose-card:hover{
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+.purpose-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.purpose-content{
+padding:30px;
+text-align:center;
+}
+
+.purpose-content h3{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.purpose-content p{
+font-size:15px;
+color:#555;
+}
+
+.purpose-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+background:#6b8e73;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-size:14px;
+transition:0.3s;
+}
+
+.purpose-btn:hover{background:#587a61;}
+
+/* ===== GALLERY ===== */
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:16px;
+transition:0.4s ease;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* ===== MAP ===== */
+.map-container{
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#1f2e20;
+color:#ccc;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+/* ===== LINE BUTTON ===== */
+.line-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#06c755;
+color:white;
+padding:15px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:500;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+.purpose-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:900px){
+.two-col{grid-template-columns:1fr;}
+.hero h1{font-size:38px;}
+}
+
+@media(max-width:768px){
+.section{padding:70px 0;}
+.purpose-grid{grid-template-columns:1fr;}
+.gallery{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:480px){
+.gallery{grid-template-columns:1fr;}
+}
+</style>
 </head>
 
 <body>
+  
+<header class="main-nav">
+<div class="main-nav-inner">
+<a href="index.html" class="logo">Khao Kho Empire</a>
+<div style="display:flex;align-items:center;gap:40px;">
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="investment.html">Investment</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('th')">TH</button>
+<button onclick="setLang('cn')">中文</button>
+</div>
+</div>
+</div>
+</header>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="main-nav">
-        <div class="main-nav-inner">
-            <a href="index.html" class="logo">Khao Kho Empire</a>
-            <div style="display:flex;align-items:center;gap:40px;">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="collections.html">Collections</a>
-                    <a href="investment.html">Investment</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="lang-switch">
-                    <button onclick="setLang('en')">EN</button>
-                    <button onclick="setLang('th')">TH</button>
-                    <button onclick="setLang('cn')">中文</button>
-                </div>
-            </div>
-        </div>
-    </header>
+<section class="hero">
+<div class="container">
+<h1 id="hero-title"></h1>
+<p id="hero-sub"></p>
+<a href="#" class="btn" id="hero-btn"></a>
+</div>
+</section>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-        <div class="container">
-            <h1 id="hero-title"></h1>
-            <p id="hero-sub"></p>
-            <a href="#" class="btn" id="hero-btn"></a>
-        </div>
-    </section>
+<section class="section">
+<div class="container">
+<h2 id="about-title"></h2>
+<div class="two-col">
+<div><p id="about-text"></p></div>
+<div><img src="villa1.jpg" alt=""></div>
+</div>
+</div>
+</section>
 
-    <!-- ================= ABOUT ================= -->
-    <section class="section">
-        <div class="container">
-            <h2 id="about-title"></h2>
-            <div class="two-col">
-                <div>
-                    <p id="about-text"></p>
-                </div>
-                <div>
-                    <img src="villa1.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="investment-section">
+  <div class="container investment-wrapper">
+    
+    <div class="investment-image">
+      <img src="villa2.jpg" alt="Luxury Villa Development">
+    </div>
 
-    <!-- ================= MAP ================= -->
-    <section class="section">
-        <div class="container">
-            <h2>Project Location</h2>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps?q=16.621000,101.041889&hl=en&z=15&output=embed"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </section>
+    <div class="investment-content">
+      <h2>Investment Vision</h2>
+      <p>
+        Strategically positioned for luxury villa development and 
+        boutique resorts.
+      </p>
+    </div>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        © 2026 Khao Kho Empire. All Rights Reserved.
-    </footer>
+  </div>
+</section>
 
-    <a href="https://line.me/ti/p/@venusproperty" target="_blank" class="line-btn">
-        💬 Add LINE Official
-    </a>
+<section class="section">
+<div class="container">
+<h2>Luxury Gallery</h2>
+<div class="gallery">
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+<img src="gallery5.jpg">
+<img src="gallery6.jpg">
+<img src="gallery7.jpg">
+<img src="gallery8.jpg">
+<img src="gallery9.jpg">
+</div>
+</div>
+</section>
 
-    <!-- ================= LANGUAGE SCRIPT ================= -->
-    <script>
-        const content = {
-            en: {
-                heroTitle:"Khao Kho Empire",
-                heroSub:"Luxury Mountain Land & Pool Villa House",
-                heroBtn:"Private Consultation",
-                heroLink:"consultant-en.html",
-                aboutTitle:"About The Estate",
-                aboutText:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round."
-            },
-            th: {
-                heroTitle:"Khao Kho Empire",
-                heroSub:"ที่ดินภูเขาและพูลวิลล่าระดับลักชัวรี",
-                heroBtn:"ปรึกษาโครงการ",
-                heroLink:"consultant-th.html",
-                aboutTitle:"เกี่ยวกับโครงการ",
-                aboutText:"ที่ดินวิวภูเขา อากาศเย็นตลอดปี เหมาะสำหรับการพัฒนาโครงการระดับพรีเมียม"
-            },
-            cn: {
-                heroTitle:"Khao Kho Empire",
-                heroSub:"高端山地土地与豪华泳池别墅",
-                heroBtn:"私人咨询",
-                heroLink:"consultant-cn.html",
-                aboutTitle:"项目介绍",
-                aboutText:"位于纯净山景之中，全年气候凉爽。"
-            }
-        };
+<section class="section">
+<div class="container">
+<h2>Project Location</h2>
+<div class="map-container">
+<iframe 
+src="https://www.google.com/maps?q=16.621000,101.041889&hl=en&z=15&output=embed"
+width="100%" height="450" style="border:0;" allowfullscreen loading="lazy">
+</iframe>
+</div>
+</div>
+</section>
 
-        function setLang(lang){
-            document.getElementById("hero-title").innerText = content[lang].heroTitle;
-            document.getElementById("hero-sub").innerText = content[lang].heroSub;
-            document.getElementById("hero-btn").innerText = content[lang].heroBtn;
-            document.getElementById("hero-btn").href = content[lang].heroLink;
-            document.getElementById("about-title").innerText = content[lang].aboutTitle;
-            document.getElementById("about-text").innerText = content[lang].aboutText;
-        }
+<footer>
+© 2026 Khao Kho Empire. All Rights Reserved.
+</footer>
 
-        setLang('en');
-    </script>
+<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="line-btn">
+💬 Add LINE Official
+</a>
+
+<script>
+const content={
+en:{
+heroTitle:"Khao Kho Empire",
+heroSub:"Luxury Mountain Land & Pool Villa House",
+heroBtn:"Private Consultation",
+heroLink:"consultant-en.html",
+aboutTitle:"About The Estate",
+aboutText:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round."
+},
+th:{
+heroTitle:"Khao Kho Empire",
+heroSub:"ที่ดินภูเขาและพูลวิลล่าระดับลักชัวรี",
+heroBtn:"ปรึกษาโครงการ",
+heroLink:"consultant-th.html",
+aboutTitle:"เกี่ยวกับโครงการ",
+aboutText:"ที่ดินวิวภูเขา อากาศเย็นตลอดปี เหมาะสำหรับการพัฒนาโครงการระดับพรีเมียม"
+},
+cn:{
+heroTitle:"Khao Kho Empire",
+heroSub:"高端山地土地与豪华泳池别墅",
+heroBtn:"私人咨询",
+heroLink:"consultant-cn.html",
+aboutTitle:"项目介绍",
+aboutText:"位于纯净山景之中，全年气候凉爽。"
+}
+};
+
+function setLang(lang){
+document.getElementById("hero-title").innerText=content[lang].heroTitle;
+document.getElementById("hero-sub").innerText=content[lang].heroSub;
+document.getElementById("hero-btn").innerText=content[lang].heroBtn;
+document.getElementById("hero-btn").href=content[lang].heroLink;
+document.getElementById("about-title").innerText=content[lang].aboutTitle;
+document.getElementById("about-text").innerText=content[lang].aboutText;
+}
+setLang('en');
+</script>
 
 </body>
 </html>
