@@ -8,69 +8,265 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ========================= */
-/* GLOBAL RESET */
-/* ========================= */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* PURPOSE SECTION */
+.purpose-section{
+padding:140px 0;
+background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
+text-align:center;
 }
 
-html {
-  scroll-behavior: smooth;
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 40px;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f6f6f2;
-  color: #2f3e2e;
-  line-height: 1.6;
+.purpose-title{
+font-family:'Playfair Display',serif;
+font-size:44px;
+margin-bottom:20px;
+color:#2f3e2e;
 }
 
-/* ========================= */
-/* CONTAINER (ควบคุมความกว้างหลักของเว็บ) */
-/* ========================= */
-
-.container {
-  max-width: 1100px;      /* ความกว้างพรีเมียม */
-  margin: 0 auto;         /* จัดกึ่งกลาง */
-  padding: 0 24px;        /* เว้นซ้ายขวา */
+.purpose-sub{
+color:#666;
+margin-bottom:70px;
+font-size:18px;
 }
 
-/* ========================= */
-/* SECTION SPACING */
-/* ========================= */
-
-section {
-  padding: 100px 0;
+.purpose-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
 }
 
-/* ========================= */
-/* IMAGE CONTROL */
-/* ========================= */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
+.purpose-card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+transition:all 0.4s ease;
+display:flex;
+flex-direction:column;
 }
 
-/* ========================= */
-/* ABOUT SECTION LAYOUT */
-/* ========================= */
-
-.about-content {
-  display: flex;
-  align-items: center;
-  gap: 60px;
+.purpose-card:hover{
+transform:translateY(-12px);
+box-shadow:0 35px 80px rgba(0,0,0,0.15);
 }
 
-.about-content img {
-  max-width: 450px;
+.purpose-card img{
+width:100%;
+height:280px;
+object-fit:cover;
 }
+
+.purpose-content{
+padding:40px 35px;
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.purpose-content h3{
+font-family:'Playfair Display',serif;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.purpose-content p{
+color:#666;
+margin-bottom:30px;
+line-height:1.7;
+}
+
+.purpose-btn{
+display:inline-block;
+padding:13px 30px;
+border-radius:30px;
+background:#d6e5d8;
+color:#1e2a1f;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.purpose-btn:hover{
+background:#1e2a1f;
+color:white;
+}
+
+/* ===== GLOBAL CONTAINER ===== */
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 40px;
+}
+
+/* สำหรับจอใหญ่มาก */
+@media (min-width:1600px){
+.container{
+max-width:1300px;
+}
+}
+
+/* MAIN NAV */
+.main-nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 40px;
+display:flex;
+justify-content:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(14px);
+z-index:1000;
+}
+
+.main-nav > div{
+width:100%;
+max-width:1200px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+color:white;
+text-decoration:none;
+font-size:22px;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:400;
+font-size:15px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+opacity:0.7;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+padding:22px 70px;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(14px);
+transition:all 0.4s ease;
+}
+
+.lang-switch button{
+margin-left:10px;
+padding:8px 16px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.5);
+background:transparent;
+color:white;
+cursor:pointer;
+font-weight:500;
+transition:all 0.3s ease;
+}
+
+.lang-switch button:hover{
+background:white;
+color:#1e2a1f;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('hidden gem.jpg') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:0 20px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 35px;
+border-radius:30px;
+border:none;
+background:#d6e5d8;
+color:#1e2a1f;
+font-weight:500;
+cursor:pointer;
+text-decoration:none;
+display:inline-block;
+transition:0.3s;
+}
+
+.btn:hover{background:#ffffff;}
+margin-top:80px;
+
+  .hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero div{
+max-width:900px;
+margin:auto;
+}
+
+/* SECTION */
+.section{padding:120px 0;}
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.two-col img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
 
 /* ========================= */
 /* PURPOSE SECTION */
