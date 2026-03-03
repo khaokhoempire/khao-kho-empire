@@ -13,6 +13,8 @@ body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 html{scroll-behavior:smooth;}
 
 /* NAV */
+/* ===== NAVBAR PROFESSIONAL ===== */
+
 .main-nav{
 position:fixed;
 top:0;
@@ -36,29 +38,66 @@ font-size:22px;
 .nav-right{
 display:flex;
 align-items:center;
+gap:30px;
+}
+
+.nav-links{
+display:flex;
 gap:25px;
 }
 
 .nav-links a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+font-weight:400;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+opacity:0.7;
+}
+
+/* Language Buttons */
+.lang-switch{
+display:flex;
+gap:8px;
 }
 
 .lang-switch button{
 background:transparent;
 border:1px solid white;
 color:white;
-padding:5px 10px;
+padding:5px 12px;
 border-radius:20px;
 cursor:pointer;
 font-size:12px;
-margin-left:5px;
+transition:0.3s;
 }
 
 .lang-switch button:hover{
 background:white;
 color:black;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.main-nav{
+flex-direction:column;
+gap:15px;
+}
+
+.nav-right{
+flex-direction:column;
+gap:15px;
+}
+
+.nav-links{
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
 }
 
 /* HERO */
@@ -212,22 +251,24 @@ background:#1e2a1f;
 <body>
 
 <nav class="main-nav">
-<a href="#" class="logo">Khao Kho Empire</a>
+  
+  <a href="#" class="logo">Khao Kho Empire</a>
 
-<div class="nav-right">
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Land</a>
-<a href="#">Investment</a>
-<a href="#">Contact</a>
-</div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Land</a>
+      <a href="#">Investment</a>
+      <a href="#">Contact</a>
+    </div>
 
-<div class="lang-switch">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('th')">TH</button>
-<button onclick="setLang('cn')">中文</button>
-</div>
-</div>
+    <div class="lang-switch">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('th')">TH</button>
+      <button onclick="setLang('cn')">中文</button>
+    </div>
+  </div>
+
 </nav>
 
 <section class="hero">
