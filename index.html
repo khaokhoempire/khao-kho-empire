@@ -12,6 +12,45 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
+/* MAIN NAV */
+.main-nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(14px);
+z-index:1000;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+color:white;
+text-decoration:none;
+font-size:22px;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:400;
+font-size:15px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+opacity:0.7;
+}
+
 /* NAVBAR */
 nav{
 position:fixed;
@@ -245,11 +284,24 @@ nav{padding:15px 25px;}
 </div>
 </nav>
   
-<nav>
+<nav class="main-nav">
+<a href="index.html" class="logo">Khao Kho Empire</a>
+
+<div style="display:flex;align-items:center;gap:40px;">
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="investment.html">Investment</a>
+<a href="contact.html">Contact</a>
+</div>
+
 <div class="lang-switch">
 <button onclick="setLang('en')">EN</button>
 <button onclick="setLang('th')">TH</button>
 <button onclick="setLang('cn')">中文</button>
+</div>
+
 </div>
 </nav>
 
