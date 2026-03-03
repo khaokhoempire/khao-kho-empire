@@ -12,19 +12,40 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
+/* ===== GLOBAL CONTAINER ===== */
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 40px;
+}
+
+/* สำหรับจอใหญ่มาก */
+@media (min-width:1600px){
+.container{
+max-width:1300px;
+}
+}
+
 /* MAIN NAV */
 .main-nav{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 70px;
+padding:22px 40px;
 display:flex;
-justify-content:space-between;
-align-items:center;
+justify-content:center;
 background:rgba(0,0,0,0.35);
 backdrop-filter:blur(14px);
 z-index:1000;
+}
+
+.main-nav > div{
+width:100%;
+max-width:1200px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
@@ -121,8 +142,22 @@ transition:0.3s;
 .btn:hover{background:#ffffff;}
 margin-top:80px;
 
+  .hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero div{
+max-width:900px;
+margin:auto;
+}
+
 /* SECTION */
-.section{padding:100px 12%;}
+.section{padding:120px 0;}
 .section h2{
 font-family:'Playfair Display',serif;
 font-size:40px;
@@ -144,8 +179,12 @@ box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 /* PURPOSE SECTION */
+..section{
+padding:120px 0;
+}
+
 .purpose-section{
-padding:120px 12%;
+padding:140px 0;
 background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
 text-align:center;
 }
@@ -338,6 +377,29 @@ nav{padding:15px 25px;}
 </div>
 </section>
 
+<nav class="main-nav">
+<div>
+
+<a href="index.html" class="logo">Khao Kho Empire</a>
+
+<div style="display:flex;align-items:center;gap:40px;">
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="collections.html">Collections</a>
+<a href="investment.html">Investment</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="lang-switch">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('th')">TH</button>
+<button onclick="setLang('cn')">中文</button>
+</div>
+</div>
+
+</div>
+</nav>
+
 <!-- NEW PURPOSE SECTION -->
 <section class="purpose-section">
 <h2 class="purpose-title">Choose Your Investment Purpose</h2>
@@ -378,7 +440,10 @@ Select the land that aligns with your vision and long-term strategy.
 </section>
 
 <section class="section">
+<div class="container">
+
 <h2>Luxury Gallery</h2>
+
 <div class="gallery">
 <img src="gallery1.jpg" alt="">
 <img src="gallery2.jpg" alt="">
