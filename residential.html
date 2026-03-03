@@ -3,33 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Residential Plots | Khao Kho Empire</title>
+<title>Residential | Khao Kho Empire</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-body{
-font-family:'Inter',sans-serif;
-background:#f6f6f2;
-margin:0;
-padding:0;
-color:#2f3e2e;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
+
+/* NAVBAR */
+.main-nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(14px);
+z-index:1000;
 }
 
-.header{
-padding:100px 10%;
+.logo{
+font-family:'Playfair Display',serif;
+color:white;
+text-decoration:none;
+font-size:22px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:400;
+transition:0.3s;
+}
+
+.nav-links a:hover{color:#d6e5d8;}
+
+.nav-links a.active{
+border-bottom:2px solid #d6e5d8;
+padding-bottom:5px;
+}
+
+/* HERO */
+.sub-hero{
+height:60vh;
+background:linear-gradient(rgba(20,40,20,0.5),rgba(20,40,20,0.5)),url('hidden gem.jpg') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-background:#e8efe8;
+color:white;
+padding:0 20px;
 }
 
-.header h1{
+.sub-hero h1{
 font-family:'Playfair Display',serif;
 font-size:48px;
 margin-bottom:20px;
 }
 
+.sub-hero p{
+font-size:18px;
+}
+
+/* PLOTS */
 .plots{
-padding:80px 12%;
+padding:100px 12%;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:40px;
@@ -40,12 +83,19 @@ background:white;
 border-radius:25px;
 overflow:hidden;
 box-shadow:0 20px 50px rgba(0,0,0,0.08);
-padding:30px;
+padding:35px;
+transition:0.4s;
+}
+
+.plot-card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 70px rgba(0,0,0,0.15);
 }
 
 .plot-card h3{
 font-family:'Playfair Display',serif;
 margin-bottom:15px;
+font-size:24px;
 }
 
 .plot-card p{
@@ -55,24 +105,58 @@ color:#555;
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
+margin-top:25px;
+padding:12px 28px;
 border-radius:30px;
 background:#d6e5d8;
 text-decoration:none;
 color:#1e2a1f;
 font-weight:500;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1e2a1f;
+color:white;
+}
+
+/* FOOTER */
+footer{
+background:#1f2e20;
+color:#ccc;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.nav-links a{margin-left:15px;}
+.sub-hero h1{font-size:34px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
+<!-- NAVBAR -->
+<nav class="main-nav">
+<a href="index.html" class="logo">Khao Kho Empire</a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="residential.html" class="active">Residential</a>
+<a href="development.html">Development</a>
+<a href="investment.html">Investment</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="sub-hero">
 <h1>Residential Land Collection</h1>
 <p>Curated plots suitable for private villas and mountain homes.</p>
-</div>
+</section>
 
+<!-- PLOTS -->
 <section class="plots">
 
 <div class="plot-card">
@@ -100,6 +184,10 @@ Request Full Details
 </div>
 
 </section>
+
+<footer>
+© 2026 Khao Kho Empire. All Rights Reserved.
+</footer>
 
 </body>
 </html>
