@@ -12,6 +12,95 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
 
+/* PURPOSE SECTION */
+.purpose-section{
+padding:140px 0;
+background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
+text-align:center;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 40px;
+}
+
+.purpose-title{
+font-family:'Playfair Display',serif;
+font-size:44px;
+margin-bottom:20px;
+color:#2f3e2e;
+}
+
+.purpose-sub{
+color:#666;
+margin-bottom:70px;
+font-size:18px;
+}
+
+.purpose-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
+}
+
+.purpose-card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+transition:all 0.4s ease;
+display:flex;
+flex-direction:column;
+}
+
+.purpose-card:hover{
+transform:translateY(-12px);
+box-shadow:0 35px 80px rgba(0,0,0,0.15);
+}
+
+.purpose-card img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.purpose-content{
+padding:40px 35px;
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.purpose-content h3{
+font-family:'Playfair Display',serif;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.purpose-content p{
+color:#666;
+margin-bottom:30px;
+line-height:1.7;
+}
+
+.purpose-btn{
+display:inline-block;
+padding:13px 30px;
+border-radius:30px;
+background:#d6e5d8;
+color:#1e2a1f;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.purpose-btn:hover{
+background:#1e2a1f;
+color:white;
+}
+
 /* ===== GLOBAL CONTAINER ===== */
 .container{
 max-width:1200px;
@@ -178,91 +267,48 @@ border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* PURPOSE SECTION */
-..section{
-padding:120px 0;
-}
+<!-- PURPOSE SECTION -->
+<section class="purpose-section">
+<div class="container">
 
-.purpose-section{
-padding:140px 0;
-background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
-text-align:center;
-}
+<h2 class="purpose-title">Choose Your Investment Purpose</h2>
+<p class="purpose-sub">
+Select the land that aligns with your vision and long-term strategy.
+</p>
 
-.purpose-title{
-font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:15px;
-}
+<div class="purpose-grid">
 
-.purpose-sub{
-color:#555;
-margin-bottom:60px;
-font-size:18px;
-}
+<div class="purpose-card">
+<img src="images/residence.jpg" alt="Residence Land">
+<div class="purpose-content">
+<h3>Residence</h3>
+<p>Perfect for private pool villa or mountain retreat living.</p>
+<a href="residential.html" class="purpose-btn">Explore Residential Plots</a>
+</div>
+</div>
 
-.purpose-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
-}
+<div class="purpose-card">
+<img src="images/development.jpg" alt="Development Land">
+<div class="purpose-content">
+<h3>Development</h3>
+<p>Ideal for boutique resort or luxury property development.</p>
+<a href="development.html" class="purpose-btn">Explore Development Land</a>
+</div>
+</div>
 
-.purpose-card{
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-transition:all 0.4s ease;
-display:flex;
-flex-direction:column;
-}
+<div class="purpose-card">
+<img src="images/investment.jpg" alt="Investment Land">
+<div class="purpose-content">
+<h3>Long-Term Holding</h3>
+<p>Strategic land banking opportunity with long-term growth.</p>
+<a href="investment.html" class="purpose-btn">Explore Investment Plots</a>
+</div>
+</div>
 
-.purpose-card:hover{
-transform:translateY(-12px);
-box-shadow:0 30px 70px rgba(0,0,0,0.15);
-}
+</div>
 
-.purpose-card img{
-width:100%;
-height:260px;
-object-fit:cover;
-}
-
-.purpose-content{
-padding:35px 30px;
-flex:1;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.purpose-content h3{
-font-family:'Playfair Display',serif;
-font-size:26px;
-margin-bottom:15px;
-}
-
-.purpose-content p{
-color:#666;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-.purpose-btn{
-display:inline-block;
-padding:12px 28px;
-border-radius:30px;
-background:#d6e5d8;
-color:#1e2a1f;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.purpose-btn:hover{
-background:#1e2a1f;
-color:white;
-}
+</div>
+</section>
 
 /* GALLERY */
 .gallery{
