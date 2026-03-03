@@ -11,9 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 
-/* ========================= */
-/* COLOR SYSTEM (Luxury Tone) */
-/* ========================= */
+/* COLOR SYSTEM */
 :root{
 --primary-bg:#cfd8cf;
 --section-soft:#dbe5db;
@@ -25,24 +23,18 @@ html{scroll-behavior:smooth;}
 --nav-bg:rgba(47,62,46,0.85);
 }
 
-/* ===== BODY ===== */
 body{
 font-family:'Inter',sans-serif;
 background:var(--primary-bg);
 color:var(--deep-green);
 }
 
-/* ===== CONTAINER ===== */
 .container{
 max-width:1200px;
 margin:0 auto;
 padding:0 40px;
 }
-@media (min-width:1600px){
-.container{max-width:1300px;}
-}
 
-/* ===== SECTION ===== */
 .section{
 padding:120px 0;
 background:var(--primary-bg);
@@ -56,7 +48,7 @@ text-align:center;
 color:var(--deep-green);
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .main-nav{
 position:fixed;
 top:0;
@@ -116,7 +108,7 @@ background:white;
 color:var(--deep-green);
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
 height:100vh;
 background:linear-gradient(rgba(47,62,46,0.55),rgba(47,62,46,0.55)),url('hidden gem.jpg') center/cover no-repeat;
@@ -139,7 +131,6 @@ font-size:20px;
 margin-bottom:30px;
 }
 
-/* ===== BUTTON ===== */
 .btn{
 padding:14px 35px;
 border-radius:30px;
@@ -155,7 +146,7 @@ transition:0.3s;
 
 .btn:hover{background:var(--accent-hover);}
 
-/* ===== TWO COLUMN ===== */
+/* TWO COL */
 .two-col{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -169,7 +160,7 @@ border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* ===== INVESTMENT SECTION ===== */
+/* INVESTMENT */
 .investment-section{
 background:var(--section-soft);
 padding:140px 0;
@@ -197,7 +188,6 @@ max-width:500px;
 font-family:'Playfair Display', serif;
 font-size:52px;
 margin-bottom:25px;
-color:var(--deep-green);
 }
 
 .investment-content p{
@@ -206,7 +196,7 @@ line-height:1.8;
 color:var(--text-soft);
 }
 
-/* ===== PURPOSE SECTION ===== */
+/* PURPOSE */
 .purpose-section{
 padding:160px 0;
 background:var(--primary-bg);
@@ -217,7 +207,6 @@ text-align:center;
 font-family:'Playfair Display',serif;
 font-size:48px;
 margin-bottom:20px;
-color:var(--deep-green);
 }
 
 .purpose-sub{
@@ -283,7 +272,7 @@ transition:0.3s;
 background:var(--accent-hover);
 }
 
-/* ===== GALLERY ===== */
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -302,14 +291,14 @@ transition:0.4s ease;
 transform:scale(1.05);
 }
 
-/* ===== MAP ===== */
+/* MAP */
 .map-container{
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
 background:var(--deep-green);
 color:#ccc;
@@ -318,7 +307,7 @@ padding:30px;
 margin-top:60px;
 }
 
-/* ===== LINE BUTTON ===== */
+/* LINE */
 .line-btn{
 position:fixed;
 bottom:25px;
@@ -331,21 +320,7 @@ text-decoration:none;
 font-weight:500;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:1024px){
-.gallery{grid-template-columns:repeat(2,1fr);}
-.purpose-grid{grid-template-columns:repeat(2,1fr);}
-}
-
-@media(max-width:768px){
-.section{padding:70px 0;}
-.gallery{grid-template-columns:repeat(2,1fr);}
-.purpose-grid{grid-template-columns:1fr;}
-}
-
-@media(max-width:480px){
-.gallery{grid-template-columns:1fr;}
-}
 </style>
 </head>
+
+<body>
