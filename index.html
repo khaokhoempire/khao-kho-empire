@@ -46,9 +46,7 @@ font-weight:400;
 transition:0.3s;
 }
 
-.nav-links a:hover{
-color:#d6e5d8;
-}
+.nav-links a:hover{color:#d6e5d8;}
 
 .nav-links a.active{
 border-bottom:2px solid #d6e5d8;
@@ -211,6 +209,20 @@ object-fit:cover;
 border-radius:15px;
 }
 
+/* CONTACT */
+.contact-section{
+padding:100px 12%;
+text-align:center;
+background:#e8efe8;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
 /* FOOTER */
 footer{
 background:#1f2e20;
@@ -234,18 +246,90 @@ font-weight:500;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-.two-col{grid-template-columns:1fr;}
-.hero h1{font-size:38px;}
-.nav-links a{margin-left:15px;}
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.main-nav{
+flex-direction:column;
+padding:15px 5%;
+}
+
+.logo{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.nav-links a{
+margin:8px 12px;
+font-size:14px;
+}
+
+.hero{
+height:85vh;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section{
+padding:70px 8%;
+}
+
+.section h2{
+font-size:28px;
+}
+
+.two-col{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.purpose-section{
+padding:80px 8%;
+}
+
+.purpose-title{
+font-size:30px;
+}
+
+.purpose-sub{
+font-size:16px;
+}
+
+.purpose-card img{
+height:200px;
+}
+
+.gallery img{
+height:200px;
+}
+
+.contact-section{
+padding:70px 8%;
+}
+
+.contact-buttons{
+flex-direction:column;
+gap:15px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="main-nav">
 <a href="index.html" class="logo">Khao Kho Empire</a>
 <div class="nav-links">
@@ -256,7 +340,6 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
 <div>
 <h1>Khao Kho Empire</h1>
@@ -267,7 +350,6 @@ Private Consultation
 </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section">
 <h2>About The Estate</h2>
 <div class="two-col">
@@ -282,7 +364,6 @@ Nestled in pristine mountain landscapes, offering panoramic views and cool clima
 </div>
 </section>
 
-<!-- PURPOSE -->
 <section class="purpose-section">
 <h2 class="purpose-title">Choose Your Investment Purpose</h2>
 <p class="purpose-sub">
@@ -321,7 +402,6 @@ Select the land that aligns with your vision and long-term strategy.
 </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section">
 <h2>Luxury Gallery</h2>
 <div class="gallery">
@@ -330,21 +410,20 @@ Select the land that aligns with your vision and long-term strategy.
 <img src="gallery3.jpg" alt="">
 </div>
 </section>
+
 <section class="contact-section">
 <h2>Private Viewing & Investment Briefing</h2>
 <p>Connect directly with our land specialist for confidential discussion.</p>
-
 <div class="contact-buttons">
 <a href="https://line.me/ti/p/@venusproperty" target="_blank" class="btn">
 LINE Official
 </a>
-
-<a href="tel:0812345678" class="btn outline">
+<a href="tel:0812345678" class="btn">
 Call Direct
 </a>
 </div>
 </section>
-  
+
 <footer>
 © 2026 Khao Kho Empire. All Rights Reserved.
 </footer>
