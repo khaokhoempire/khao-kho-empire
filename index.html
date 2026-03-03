@@ -47,7 +47,6 @@ transition:0.3s;
 }
 
 .nav-links a:hover{color:#d6e5d8;}
-
 .nav-links a.active{
 border-bottom:2px solid #d6e5d8;
 padding-bottom:5px;
@@ -100,153 +99,45 @@ margin-bottom:30px;
 text-align:center;
 }
 
-.two-col{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
+/* ===== LUXURY AUTO SLIDER ===== */
 
-.two-col img{
+.slider{
 width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
-}
-
-/* PURPOSE SECTION */
-.purpose-section{
-padding:120px 12%;
-background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
-text-align:center;
-}
-
-.purpose-title{
-font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:15px;
-}
-
-.purpose-sub{
-color:#555;
-margin-bottom:60px;
-font-size:18px;
-}
-
-.purpose-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
-}
-
-.purpose-card{
-background:white;
-border-radius:25px;
+max-width:1200px;
+margin:40px auto 0;
 overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-transition:all 0.4s ease;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+.slides{
 display:flex;
-flex-direction:column;
+width:1000%;
+animation:slide 40s infinite;
 }
 
-.purpose-card:hover{
-transform:translateY(-12px);
-box-shadow:0 30px 70px rgba(0,0,0,0.15);
-}
-
-.purpose-card img{
+.slides img{
 width:100%;
-height:260px;
+height:500px;
 object-fit:cover;
+flex:0 0 100%;
 }
 
-.purpose-content{
-padding:35px 30px;
-flex:1;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
+@keyframes slide{
+0%{transform:translateX(0);}
+10%{transform:translateX(-100%);}
+20%{transform:translateX(-200%);}
+30%{transform:translateX(-300%);}
+40%{transform:translateX(-400%);}
+50%{transform:translateX(-500%);}
+60%{transform:translateX(-600%);}
+70%{transform:translateX(-700%);}
+80%{transform:translateX(-800%);}
+90%{transform:translateX(-900%);}
+100%{transform:translateX(0);}
 }
 
-.purpose-content h3{
-font-family:'Playfair Display',serif;
-font-size:26px;
-margin-bottom:15px;
-}
-
-.purpose-content p{
-color:#666;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-.purpose-btn{
-display:inline-block;
-padding:12px 28px;
-border-radius:30px;
-background:#d6e5d8;
-color:#1e2a1f;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.purpose-btn:hover{
-background:#1e2a1f;
-color:white;
-}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
-}
-
-/* CONTACT */
-.contact-section{
-padding:100px 12%;
-text-align:center;
-background:#e8efe8;
-}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-/* FOOTER */
-footer{
-background:#1f2e20;
-color:#ccc;
-text-align:center;
-padding:30px;
-margin-top:60px;
-}
-
-/* LINE BUTTON */
-.line-btn{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#06c755;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-text-decoration:none;
-font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width:768px){
 
 .main-nav{
@@ -276,22 +167,7 @@ font-size:14px;
 .section{padding:70px 8%;}
 .section h2{font-size:28px;}
 
-.two-col{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-.purpose-section{padding:80px 8%;}
-.purpose-title{font-size:30px;}
-.purpose-sub{font-size:16px;}
-.purpose-card img{height:200px;}
-.gallery img{height:200px;}
-
-.contact-section{padding:70px 8%;}
-.contact-buttons{
-flex-direction:column;
-gap:15px;
-}
+.slides img{height:250px;}
 }
 </style>
 </head>
@@ -319,84 +195,23 @@ Private Consultation
 </section>
 
 <section class="section">
-<h2>About The Estate</h2>
-<div class="two-col">
-<div>
-<p style="line-height:1.8;font-size:18px;">
-Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.
-</p>
-</div>
-<div>
-<img src="villa1.jpg" alt="">
-</div>
-</div>
-</section>
-
-<section class="purpose-section">
-<h2 class="purpose-title">Choose Your Investment Purpose</h2>
-<p class="purpose-sub">
-Select the land that aligns with your vision and long-term strategy.
-</p>
-
-<div class="purpose-grid">
-
-<div class="purpose-card">
-<img src="images/residence.jpg" alt="Residential Land">
-<div class="purpose-content">
-<h3>Residential</h3>
-<p>Perfect for private pool villa or mountain retreat living.</p>
-<a href="residential.html" class="purpose-btn">Explore Residential</a>
-</div>
-</div>
-
-<div class="purpose-card">
-<img src="images/development.jpg" alt="Development Land">
-<div class="purpose-content">
-<h3>Development</h3>
-<p>Ideal for boutique resort or luxury property development.</p>
-<a href="development.html" class="purpose-btn">Explore Development</a>
-</div>
-</div>
-
-<div class="purpose-card">
-<img src="images/investment.jpg" alt="Investment Land">
-<div class="purpose-content">
-<h3>Investment</h3>
-<p>Strategic land banking opportunity with long-term growth.</p>
-<a href="investment.html" class="purpose-btn">Explore Investment</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section">
 <h2>Luxury Gallery</h2>
-<div class="gallery">
-<img src="gallery1.jpg" alt="">
-  <img src="gallery2.jpg" alt="">
-  <img src="gallery3.jpg" alt="">
-  <img src="gallery4.jpg" alt="">
-  <img src="gallery5.jpg" alt="">
-  <img src="gallery6.jpg" alt="">
-  <img src="gallery7.jpg" alt="">
-  <img src="gallery8.jpg" alt="">
-  <img src="gallery9.jpg" alt="">
-  <img src="gallery10.jpg" alt="">
-</div>
-</section>
 
-<section class="contact-section">
-<h2>Private Viewing & Investment Briefing</h2>
-<p>Connect directly with our land specialist for confidential discussion.</p>
-<div class="contact-buttons">
-<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="btn">
-LINE Official
-</a>
-<a href="tel:0620582662" class="btn">
-Call Direct
-</a>
+<div class="slider">
+  <div class="slides">
+    <img src="gallery1.jpg" alt="">
+    <img src="gallery2.jpg" alt="">
+    <img src="gallery3.jpg" alt="">
+    <img src="gallery4.jpg" alt="">
+    <img src="gallery5.jpg" alt="">
+    <img src="gallery6.jpg" alt="">
+    <img src="gallery7.jpg" alt="">
+    <img src="gallery8.jpg" alt="">
+    <img src="gallery9.jpg" alt="">
+    <img src="gallery10.jpg" alt="">
+  </div>
 </div>
+
 </section>
 
 <footer>
