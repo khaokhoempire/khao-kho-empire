@@ -23,6 +23,66 @@ padding:0 40px;
 .container{max-width:1300px;}
 }
 
+/* ========================= */
+/* INVESTMENT VISION SECTION */
+/* ========================= */
+
+.investment-section{
+  background:#cfd8cf; /* สีพื้นหลังเขียวหม่นหรู */
+  padding:140px 0;
+}
+
+.investment-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:80px;
+}
+
+.investment-image img{
+  width:100%;
+  max-width:700px;
+  border-radius:30px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+.investment-content{
+  max-width:500px;
+}
+
+.investment-content h2{
+  font-family:'Playfair Display', serif;
+  font-size:52px;
+  margin-bottom:25px;
+  color:#2f3e2e;
+}
+
+.investment-content p{
+  font-size:20px;
+  line-height:1.8;
+  color:#3e4e3d;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:1000px){
+  .investment-wrapper{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+  }
+
+  .investment-content h2{
+    font-size:38px;
+  }
+
+  .investment-image img{
+    max-width:100%;
+  }
+}
+
 /* ===== NAVBAR ===== */
 .main-nav{
 position:fixed;
@@ -291,7 +351,24 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 </head>
 
 <body>
+<section class="investment-section">
+  <div class="container investment-wrapper">
+    
+    <div class="investment-image">
+      <img src="villa2.jpg" alt="Luxury Villa Development">
+    </div>
 
+    <div class="investment-content">
+      <h2>Investment Vision</h2>
+      <p>
+        Strategically positioned for luxury villa development and 
+        boutique resorts.
+      </p>
+    </div>
+
+  </div>
+</section>
+  
 <header class="main-nav">
 <div class="main-nav-inner">
 <a href="index.html" class="logo">Khao Kho Empire</a>
