@@ -194,6 +194,102 @@ border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
+/* =============================== */
+/* INVESTMENT PURPOSE SECTION */
+/* =============================== */
+
+.purpose-section{
+position:relative;
+padding:160px 0;
+background:linear-gradient(rgba(230,239,230,0.85),rgba(230,239,230,0.85)),
+url('mountain-bg.jpg') center/cover no-repeat;
+text-align:center;
+}
+
+.purpose-title{
+font-family:'Playfair Display',serif;
+font-size:48px;
+margin-bottom:20px;
+color:#2f3e2e;
+}
+
+.purpose-sub{
+max-width:700px;
+margin:0 auto 90px auto;
+font-size:20px;
+color:#4a5a49;
+}
+
+.purpose-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:50px;
+}
+
+.purpose-card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 30px 60px rgba(0,0,0,0.12);
+transition:0.4s ease;
+}
+
+.purpose-card:hover{
+transform:translateY(-15px);
+box-shadow:0 40px 80px rgba(0,0,0,0.18);
+}
+
+.purpose-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.purpose-content{
+padding:40px;
+}
+
+.purpose-content h3{
+font-family:'Playfair Display',serif;
+font-size:26px;
+margin-bottom:15px;
+}
+
+.purpose-content p{
+color:#5a6a59;
+margin-bottom:25px;
+line-height:1.7;
+}
+
+.purpose-btn{
+display:inline-block;
+padding:14px 32px;
+border-radius:30px;
+background:#e6e2d8;
+color:#2f3e2e;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.purpose-btn:hover{
+background:#d8d3c8;
+}
+
+/* Responsive */
+@media(max-width:1024px){
+.purpose-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.purpose-grid{
+grid-template-columns:1fr;
+}
+.purpose-title{font-size:36px;}
+}
+
 /* ===== GALLERY ===== */
 .gallery{
 display:grid;
@@ -310,6 +406,47 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 </div>
 </section>
 
+<section class="purpose-section">
+<div class="container">
+
+<h2 class="purpose-title">Choose Your Investment Purpose</h2>
+<p class="purpose-sub">
+Tailor your investment vision by selecting the perfect land plot fit your unique goals.
+</p>
+
+<div class="purpose-grid">
+
+<div class="purpose-card">
+<img src="residence.jpg" alt="">
+<div class="purpose-content">
+<h3>Residence</h3>
+<p>Perfect for private pool villa or mountain retreat.</p>
+<a href="#" class="purpose-btn">Explore Residential Plots</a>
+</div>
+</div>
+
+<div class="purpose-card">
+<img src="development.jpg" alt="">
+<div class="purpose-content">
+<h3>Development</h3>
+<p>Ideal for boutique resort or luxury development.</p>
+<a href="#" class="purpose-btn">Explore Development Land</a>
+</div>
+</div>
+
+<div class="purpose-card">
+<img src="holding.jpg" alt="">
+<div class="purpose-content">
+<h3>Long-Term Holding</h3>
+<p>Strategic land banking opportunity with long-term growth.</p>
+<a href="#" class="purpose-btn">Explore Investment Plots</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+  
 <section class="section">
 <div class="container">
 <h2>Luxury Gallery</h2>
