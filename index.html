@@ -322,15 +322,15 @@ Select the land that aligns with your vision and long-term strategy.
 /* GALLERY */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(3, 1fr); /* 3 ภาพต่อแถว */
+gap:20px;
 }
 
 .gallery img{
 width:100%;
-height:250px;
+aspect-ratio:1/1;   /* ทำให้เป็นสี่เหลี่ยมจตุรัส */
 object-fit:cover;
-border-radius:15px;
+border-radius:16px;
 }
 
 /* FOOTER */
