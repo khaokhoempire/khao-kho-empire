@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khao Kho Empire</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
+html{scroll-behavior:smooth;}
 
-/* PREMIUM NAVBAR */
+/* NAV */
 .main-nav{
 position:fixed;
 top:0;
@@ -33,23 +33,10 @@ text-decoration:none;
 font-size:22px;
 }
 
-.nav-links{
-display:flex;
-align-items:center;
-}
-
 .nav-links a{
 color:white;
 text-decoration:none;
 margin-left:30px;
-font-weight:400;
-transition:0.3s;
-}
-
-.nav-links a:hover{color:#d6e5d8;}
-.nav-links a.active{
-border-bottom:2px solid #d6e5d8;
-padding-bottom:5px;
 }
 
 /* HERO */
@@ -70,104 +57,68 @@ font-size:55px;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:20px;
-margin-bottom:30px;
+.section{
+padding:120px 12%;
 }
 
-.btn{
-padding:14px 35px;
-border-radius:30px;
-border:none;
-background:#d6e5d8;
-color:#1e2a1f;
-font-weight:500;
-cursor:pointer;
-text-decoration:none;
-display:inline-block;
-transition:0.3s;
-}
-
-.btn:hover{background:#ffffff;}
-
-/* SECTION */
-.section{padding:100px 12%;}
 .section h2{
 font-family:'Playfair Display',serif;
 font-size:40px;
-margin-bottom:30px;
 text-align:center;
+margin-bottom:40px;
 }
 
-/* ===== LUXURY AUTO SLIDER ===== */
+/* ===== PROFESSIONAL SLIDER ===== */
 
 .slider{
-width:100%;
+position:relative;
 max-width:1200px;
-margin:40px auto 0;
+margin:auto;
 overflow:hidden;
 border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.15);
+box-shadow:0 20px 60px rgba(0,0,0,0.2);
 }
 
 .slides{
 display:flex;
-width:1000%;
-animation:slide 40s infinite;
+transition:transform 0.8s ease-in-out;
 }
 
 .slides img{
 width:100%;
-height:500px;
+flex-shrink:0;
+height:520px;
 object-fit:cover;
-flex:0 0 100%;
 }
 
-@keyframes slide{
-0%{transform:translateX(0);}
-10%{transform:translateX(-100%);}
-20%{transform:translateX(-200%);}
-30%{transform:translateX(-300%);}
-40%{transform:translateX(-400%);}
-50%{transform:translateX(-500%);}
-60%{transform:translateX(-600%);}
-70%{transform:translateX(-700%);}
-80%{transform:translateX(-800%);}
-90%{transform:translateX(-900%);}
-100%{transform:translateX(0);}
+/* Buttons */
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:15px 20px;
+cursor:pointer;
+font-size:22px;
+border-radius:50%;
+transition:0.3s;
 }
+
+.prev:hover, .next:hover{
+background:#1e2a1f;
+}
+
+.prev{left:20px;}
+.next{right:20px;}
 
 /* MOBILE */
-@media (max-width:768px){
-
-.main-nav{
-flex-direction:column;
-padding:15px 5%;
-}
-
-.logo{
-margin-bottom:10px;
-font-size:20px;
-}
-
-.nav-links{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.nav-links a{
-margin:8px 12px;
-font-size:14px;
-}
-
-.hero{height:85vh;}
-.hero h1{font-size:34px;}
-.hero p{font-size:16px;}
-
-.section{padding:70px 8%;}
-.section h2{font-size:28px;}
-
-.slides img{height:250px;}
+@media(max-width:768px){
+.hero h1{font-size:32px;}
+.section{padding:80px 8%;}
+.slides img{height:260px;}
+.prev, .next{padding:10px 14px;font-size:18px;}
 }
 </style>
 </head>
@@ -177,7 +128,7 @@ font-size:14px;
 <nav class="main-nav">
 <a href="index.html" class="logo">Khao Kho Empire</a>
 <div class="nav-links">
-<a href="index.html" class="active">Home</a>
+<a href="index.html">Home</a>
 <a href="collections.html">Land Collection</a>
 <a href="investment.html">Investment</a>
 <a href="contact.html">Contact</a>
@@ -188,39 +139,67 @@ font-size:14px;
 <div>
 <h1>Khao Kho Empire</h1>
 <p>Luxury Mountain Land & Pool Villa House</p>
-<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="btn">
-Private Consultation
-</a>
 </div>
 </section>
 
 <section class="section">
 <h2>Luxury Gallery</h2>
 
-<div class="slider">
-  <div class="slides">
-    <img src="gallery1.jpg" alt="">
-    <img src="gallery2.jpg" alt="">
-    <img src="gallery3.jpg" alt="">
-    <img src="gallery4.jpg" alt="">
-    <img src="gallery5.jpg" alt="">
-    <img src="gallery6.jpg" alt="">
-    <img src="gallery7.jpg" alt="">
-    <img src="gallery8.jpg" alt="">
-    <img src="gallery9.jpg" alt="">
-    <img src="gallery10.jpg" alt="">
-  </div>
+<div class="slider" id="slider">
+<div class="slides" id="slides">
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+<img src="gallery5.jpg">
+<img src="gallery6.jpg">
+<img src="gallery7.jpg">
+<img src="gallery8.jpg">
+<img src="gallery9.jpg">
+<img src="gallery10.jpg">
 </div>
 
+<button class="prev" onclick="prevSlide()">❮</button>
+<button class="next" onclick="nextSlide()">❯</button>
+
+</div>
 </section>
 
-<footer>
+<footer style="background:#1f2e20;color:#ccc;text-align:center;padding:30px;">
 © 2026 Khao Kho Empire. All Rights Reserved.
 </footer>
 
-<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="line-btn">
-💬 Add LINE Official
-</a>
+<script>
+let currentIndex = 0;
+const slides = document.getElementById("slides");
+const totalSlides = slides.children.length;
+
+function updateSlide(){
+slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide(){
+currentIndex = (currentIndex + 1) % totalSlides;
+updateSlide();
+}
+
+function prevSlide(){
+currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+updateSlide();
+}
+
+/* Auto Slide (ช้าและดูโปร) */
+let autoSlide = setInterval(nextSlide, 5000);
+
+/* Pause on Hover */
+document.getElementById("slider").addEventListener("mouseenter", () => {
+clearInterval(autoSlide);
+});
+
+document.getElementById("slider").addEventListener("mouseleave", () => {
+autoSlide = setInterval(nextSlide, 5000);
+});
+</script>
 
 </body>
 </html>
