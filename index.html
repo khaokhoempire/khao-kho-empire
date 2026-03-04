@@ -564,6 +564,95 @@ footer{
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ============================= */
+/* MOBILE FIX – FINAL VERSION */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+  /* ลด padding หลัก */
+  .section{
+    padding:60px 0 !important;
+  }
+
+  /* HERO */
+  .hero{
+    height:75vh;
+    padding:0 20px;
+  }
+
+  .hero h1{
+    font-size:30px !important;
+    line-height:1.2;
+  }
+
+  .hero p{
+    font-size:16px !important;
+  }
+
+  /* TWO COLUMN → STACK */
+  .two-col{
+    grid-template-columns:1fr !important;
+    gap:30px !important;
+  }
+
+  /* INVESTMENT */
+  .investment-wrapper{
+    flex-direction:column !important;
+    gap:30px;
+    text-align:center;
+  }
+
+  .investment-content h2{
+    font-size:28px !important;
+  }
+
+  /* PURPOSE GRID */
+  .purpose-grid{
+    grid-template-columns:1fr !important;
+    gap:25px;
+  }
+
+  .purpose-title{
+    font-size:30px !important;
+  }
+
+  /* GALLERY FIX สำคัญมาก */
+  .gallery{
+    grid-template-columns:1fr !important;
+    gap:15px !important;
+  }
+
+  .gallery img{
+    border-radius:20px;
+  }
+
+  /* ลดช่องว่างก่อน footer */
+  footer{
+    margin-top:40px !important;
+  }
+
+  /* ปรับ map */
+  .map-container iframe{
+    height:280px !important;
+  }
+
+}
+
+/* จอเล็กมาก */
+@media screen and (max-width:480px){
+
+  .hero h1{
+    font-size:26px !important;
+  }
+
+  .btn{
+    padding:10px 20px;
+    font-size:14px;
+  }
+
+}
   
 </style>
 </head>
