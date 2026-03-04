@@ -893,6 +893,7 @@ document.addEventListener("DOMContentLoaded",function(){
 <script>
 
 <script>
+<script>
 document.addEventListener("DOMContentLoaded", function(){
 
 const track = document.querySelector('.gallery-track');
@@ -901,16 +902,18 @@ const prevBtn = document.querySelector('.prev');
 
 if(!track) return;
 
-/* ถ้าเป็นมือถือ ไม่ต้องใช้ slider */
-if(window.innerWidth <= 768){
-  return;
-}
-
 let index = 0;
 const totalImages = track.children.length;
 const visibleImages = 3;
 
+function isMobile(){
+  return window.innerWidth <= 768;
+}
+
 nextBtn.addEventListener('click', () => {
+
+  if(isMobile()) return; // มือถือไม่ใช้ slider
+
   if(index < totalImages - visibleImages){
     index++;
     updateGallery();
@@ -918,6 +921,9 @@ nextBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener('click', () => {
+
+  if(isMobile()) return; // มือถือไม่ใช้ slider
+
   if(index > 0){
     index--;
     updateGallery();
