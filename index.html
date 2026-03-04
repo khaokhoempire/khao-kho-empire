@@ -560,9 +560,6 @@ footer{
     font-size: 13px;
   }
 
-  .gallery {
-    grid-template-columns: 1fr !important;
-  }
 }
 
 /* ============================= */
@@ -888,18 +885,17 @@ document.addEventListener("DOMContentLoaded",function(){
   setLang(savedLang);
 });
 
-</script>
+</script>   <!-- จบ script แปลภาษา -->
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function(){
 
 const track = document.querySelector('.gallery-track');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
-if(!track) return;
-
+if(!track || !nextBtn || !prevBtn) return;
+  
 let index = 0;
 const totalImages = track.children.length;
 const visibleImages = 3;
@@ -910,7 +906,7 @@ function isMobile(){
 
 nextBtn.addEventListener('click', () => {
 
-  if(isMobile()) return; // มือถือไม่ใช้ slider
+  if(isMobile()) return;
 
   if(index < totalImages - visibleImages){
     index++;
@@ -920,7 +916,7 @@ nextBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
 
-  if(isMobile()) return; // มือถือไม่ใช้ slider
+  if(isMobile()) return;
 
   if(index > 0){
     index--;
