@@ -519,5 +519,90 @@ footer{
 <p>© 2026 Khao Kho Empire. All Rights Reserved.</p>
 </footer>
 
+<script>
+
+const translations = {
+  en: {
+    nav_home: "Home",
+    nav_collection: "Collection",
+    nav_gallery: "Gallery",
+    nav_contact: "Contact",
+
+    hero_title: "Khao Kho Empire",
+    hero_sub: "Luxury Mountain Land & Pool Villa House",
+    hero_btn: "Private Consultation",
+
+    about_title: "About The Estate",
+    about_text: "Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.",
+
+    invest_title: "Investment Vision",
+    invest_text: "Strategically positioned for luxury villa development and boutique resorts.",
+
+    purpose_title: "Choose Your Investment Purpose",
+    purpose_sub: "Select the land that aligns with your vision and long-term strategy."
+  },
+
+  th: {
+    nav_home: "หน้าแรก",
+    nav_collection: "โครงการ",
+    nav_gallery: "แกลเลอรี",
+    nav_contact: "ติดต่อ",
+
+    hero_title: "Khao Kho Empire",
+    hero_sub: "ที่ดินภูเขาหรู & บ้านพูลวิลล่า",
+    hero_btn: "ปรึกษาส่วนตัว",
+
+    about_title: "เกี่ยวกับโครงการ",
+    about_text: "ตั้งอยู่ท่ามกลางภูเขาอันบริสุทธิ์ มองเห็นวิวพาโนรามา อากาศเย็นสบายตลอดปี",
+
+    invest_title: "วิสัยทัศน์การลงทุน",
+    invest_text: "ศักยภาพสูงสำหรับการพัฒนาวิลล่าหรูและบูทีครีสอร์ท",
+
+    purpose_title: "เลือกวัตถุประสงค์การลงทุน",
+    purpose_sub: "เลือกที่ดินที่สอดคล้องกับวิสัยทัศน์และกลยุทธ์ระยะยาวของคุณ"
+  },
+
+  cn: {
+    nav_home: "首页",
+    nav_collection: "项目",
+    nav_gallery: "画廊",
+    nav_contact: "联系",
+
+    hero_title: "Khao Kho Empire",
+    hero_sub: "豪华山地与泳池别墅",
+    hero_btn: "私人咨询",
+
+    about_title: "关于项目",
+    about_text: "坐落于纯净山景之中，全年凉爽气候与全景视野",
+
+    invest_title: "投资愿景",
+    invest_text: "战略位置优越，适合豪华别墅与精品度假村开发",
+
+    purpose_title: "选择您的投资目标",
+    purpose_sub: "选择符合您长期战略的土地"
+  }
+};
+
+
+function setLang(lang) {
+  const elements = document.querySelectorAll("[data-key]");
+  elements.forEach(el => {
+    const key = el.getAttribute("data-key");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  localStorage.setItem("language", lang);
+}
+
+
+// โหลดภาษาที่เคยเลือก
+document.addEventListener("DOMContentLoaded", function() {
+  const savedLang = localStorage.getItem("language") || "en";
+  setLang(savedLang);
+});
+
+</script>  
 </body>
 </html>
