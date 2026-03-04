@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Consultation | Khao Kho Empire</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:#f4f6f2;
+  color:#2f3e2e;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.subtitle{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 70px;
+  font-size:18px;
+  color:#555;
+}
+
+/* Advisor Grid */
+.advisor-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:50px;
+}
+
+.advisor-card{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.advisor-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 80px rgba(0,0,0,0.15);
+}
+
+.advisor-card img{
+  width:180px;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:25px;
+}
+
+.advisor-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.role{
+  font-size:14px;
+  letter-spacing:1px;
+  color:#6b8e73;
+  margin-bottom:15px;
+  text-transform:uppercase;
+}
+
+.quote{
+  font-size:14px;
+  font-style:italic;
+  color:#666;
+  margin-bottom:25px;
+}
+
+.contact-btn{
+  display:inline-block;
+  padding:10px 24px;
+  background:#1f2e20;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.contact-btn:hover{
+  background:#6b8e73;
+}
+
+/* Appointment Section */
+.appointment{
+  margin-top:120px;
+  background:white;
+  padding:60px;
+  border-radius:30px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+.appointment h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  margin-bottom:30px;
+}
+
+form{
+  display:grid;
+  gap:20px;
+}
+
+input, textarea{
+  padding:15px;
+  border-radius:15px;
+  border:1px solid #ddd;
+  font-size:14px;
+}
+
+button{
+  padding:15px;
+  background:#1f2e20;
+  color:white;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#6b8e73;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Private Consultation</h1>
+<p class="subtitle">
+Our dedicated advisors provide discreet, personalized guidance for every investment decision.
+</p>
+
+<div class="advisor-grid">
+
+<div class="advisor-card">
+<img src="advisor1.jpg">
+<h3>Miss Duannapha Meethonglarng</h3>
+<div class="role">Senior Investment Director</div>
+<div class="quote">"Long-term value is built on location, timing, and vision."</div>
+<a href="mailto:advisor@khaokhoempire.com" class="contact-btn">Direct Contact</a>
+</div>
+
+<div class="advisor-card">
+<img src="advisor2.jpg">
+<h3>Miss Kanokkarn Boonprakom</h3>
+<div class="role">Luxury Property Consultant</div>
+<div class="quote">"Every plot tells a story. We help you choose the right one."</div>
+<a href="mailto:advisor@khaokhoempire.com" class="contact-btn">Direct Contact</a>
+</div>
+
+</div>
+
+<div class="appointment">
+<h2>Schedule a Private Appointment</h2>
+
+<form>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="tel" placeholder="Phone Number">
+<textarea rows="5" placeholder="Your Investment Interest"></textarea>
+<button type="submit">Request Consultation</button>
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
