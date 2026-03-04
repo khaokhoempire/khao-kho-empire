@@ -5,13 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khao Kho Empire</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-/* ========================= */
-/* GLOBAL RESET */
-/* ========================= */
+<style>
 
 *{
   margin:0;
@@ -19,248 +15,305 @@
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
-  font-family:'Playfair Display', serif;  /* ฟอนต์เดียวทั้งเว็บ */
-  background:#f3f5f1;
-  color:#2e3b2f;
+  font-family:'Inter',sans-serif;
+  background:#f6f6f2;
+  color:#2f3e2e;
   line-height:1.7;
-  letter-spacing:0.3px;
 }
 
 /* ========================= */
-/* CONTAINER */
+/* GLOBAL CONTAINER */
 /* ========================= */
-
 .container{
   max-width:1200px;
   margin:0 auto;
-  padding:0 30px;
+  padding:0 20px;
 }
 
 /* ========================= */
-/* HEADER */
+/* HEADER & NAVIGATION */
 /* ========================= */
-
 header{
-  background:linear-gradient(90deg,#132a18,#1f3d24);
-  padding:20px 0;
+  background:#1f2e20;
+  padding:18px 0;
 }
 
 nav{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-  font-size:26px;
+  font-family:'Playfair Display', serif;
+  font-size:24px;
   color:white;
   text-decoration:none;
   font-weight:600;
-}
-
-/* Navigation Center */
-.nav-links{
-  display:flex;
-  gap:40px;
-  margin-left:80px;
 }
 
 .nav-links a{
   color:white;
   text-decoration:none;
-  font-size:16px;
-  opacity:0.85;
+  margin-left:30px;
+  font-size:15px;
+  font-weight:500;
   transition:0.3s;
 }
 
 .nav-links a:hover{
-  opacity:1;
+  opacity:0.8;
 }
 
-/* Language Right */
-.lang-switch{
-  margin-left:auto;  /* ดันไปขวาสุด */
-  display:flex;
-  gap:12px;
-}
-
+/* Language switch */
 .lang-switch button{
   background:transparent;
-  border:1px solid rgba(255,255,255,0.5);
+  border:1px solid white;
   color:white;
-  padding:6px 16px;
-  border-radius:30px;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
   cursor:pointer;
-  font-size:13px;
+  margin-left:12px;
   transition:0.3s;
 }
 
 .lang-switch button:hover{
   background:white;
-  color:#132a18;
+  color:#1f2e20;
 }
 
 /* ========================= */
 /* HERO SECTION */
 /* ========================= */
-
 .hero{
-  height:90vh;
-  background:url('hero.jpg') center/cover no-repeat;
-  position:relative;
+  height:85vh;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-image:url('hero.jpg'); /* <-- ใส่ HERO ภาพหลัก */
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
+  position:relative;
 }
 
-/* Luxury Overlay */
 .hero::before{
   content:"";
   position:absolute;
-  inset:0;
-  background:linear-gradient(
-    rgba(10,20,12,0.75),
-    rgba(10,20,12,0.55)
-  );
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.45);
 }
 
 .hero-content{
-  position:relative;
-  z-index:2;
+  position:relative; 
   color:white;
+  z-index:2;
 }
 
 .hero h1{
-  font-size:64px;
-  font-weight:600;
-  margin-bottom:20px;
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  margin-bottom:15px;
 }
 
 .hero p{
-  font-size:22px;
-  opacity:0.9;
-  margin-bottom:35px;
+  font-size:20px;
+  margin-bottom:22px;
 }
 
-/* Luxury Button */
 .hero .btn{
-  padding:16px 40px;
-  background:#dbe5d8;
-  color:#1b2c1d;
-  border-radius:40px;
-  text-decoration:none;
+  padding:14px 32px;
+  background:#d6e5d8;
+  color:#1e2a1f;
+  border-radius:30px;
   font-size:16px;
+  font-weight:500;
+  text-decoration:none;
   transition:0.3s;
 }
 
 .hero .btn:hover{
-  background:white;
-  transform:translateY(-3px);
+  background:#cfd8cf;
 }
 
 /* ========================= */
-/* SECTION STYLE */
+/* ABOUT SECTION */
 /* ========================= */
-
-section{
-  padding:120px 0;
+.about-section{
+  padding:100px 0;
 }
 
-h2{
-  font-size:44px;
-  margin-bottom:30px;
-  font-weight:600;
-  color:#1e2f20;
-}
-
-/* ========================= */
-/* INVESTMENT / ABOUT LAYOUT */
-/* ========================= */
-
-.two-col{
+.about-section .two-col{
   display:flex;
-  gap:80px;
+  gap:40px;
   align-items:center;
 }
 
-.two-col img{
+.about-section img{
   width:100%;
-  max-width:650px;
-  border-radius:30px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+  border-radius:18px;
+  object-fit:cover;
+  max-width:500px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 /* ========================= */
 /* PURPOSE SECTION */
 /* ========================= */
-
 .purpose-section{
-  background:#e8eee6;
+  padding:120px 0;
+  background:linear-gradient(to bottom,#f6f6f2,#e9efe9);
+  text-align:center;
+}
+
+.purpose-title{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.purpose-sub{
+  color:#666;
+  margin-bottom:50px;
+  font-size:17px;
+  max-width:750px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .purpose-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:50px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
 }
 
 .purpose-card{
   background:white;
-  border-radius:25px;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 25px 60px rgba(0,0,0,0.08);
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
   transition:0.4s;
 }
 
 .purpose-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
+  box-shadow:0 30px 80px rgba(0,0,0,0.2);
 }
 
 .purpose-card img{
+  width:100%;
   height:260px;
   object-fit:cover;
 }
 
 .purpose-content{
-  padding:40px 35px;
+  padding:35px 30px;
 }
 
 .purpose-content h3{
-  font-size:28px;
-  margin-bottom:15px;
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:12px;
+}
+
+.purpose-content p{
+  color:#555;
+  font-size:15px;
 }
 
 .purpose-btn{
   display:inline-block;
   margin-top:20px;
-  padding:14px 30px;
-  background:#1f3d24;
+  padding:12px 28px;
+  background:#6b8e73;
   color:white;
-  border-radius:40px;
   text-decoration:none;
+  border-radius:30px;
   transition:0.3s;
 }
 
 .purpose-btn:hover{
-  background:#132a18;
+  background:#587a61;
+}
+
+/* ========================= */
+/* GALLERY SECTION */
+/* ========================= */
+.gallery-section{
+  padding:100px 0;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.04);
 }
 
 /* ========================= */
 /* FOOTER */
 /* ========================= */
-
 footer{
-  background:#132a18;
-  color:#cbd5c9;
+  background:#1f2e20;
+  color:#ccc;
   text-align:center;
-  padding:50px 20px;
+  padding:40px 20px;
   font-size:14px;
+}
+/* ========================= */
+/* INVESTMENT VISION SECTION */
+/* ========================= */
+
+.investment-section{
+  background:#cfd8cf; /* สีพื้นหลังเขียวหม่นหรู */
+  padding:140px 0;
+}
+
+.investment-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:80px;
+}
+
+.investment-image img{
+  width:100%;
+  max-width:700px;
+  border-radius:30px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+.investment-content{
+  max-width:500px;
+}
+
+.investment-content h2{
+  font-family:'Playfair Display', serif;
+  font-size:52px;
+  margin-bottom:25px;
+  color:#2f3e2e;
+}
+
+.investment-content p{
+  font-size:20px;
+  line-height:1.8;
+  color:#3e4e3d;
 }
 
 /* ========================= */
@@ -268,19 +321,34 @@ footer{
 /* ========================= */
 
 @media(max-width:1000px){
-
-  .two-col{
+  .investment-wrapper{
     flex-direction:column;
     text-align:center;
+    gap:40px;
   }
 
-  .hero h1{
-    font-size:42px;
+  .investment-content h2{
+    font-size:38px;
   }
 
+  .investment-image img{
+    max-width:100%;
+  }
 }
 
+
   
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media(max-width:900px){
+  .about-section .two-col{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:25px;
+  }
+  .hero h1{font-size:36px;}
+}
 </style>
 </head>
 <body>
