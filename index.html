@@ -144,41 +144,47 @@ nav{
 /* ========================= */
 /* ABOUT SECTION */
 /* ========================= */
+
 .about-section{
-  background:#eef3ec;   /* เขียวอ่อนละมุน */
-  padding:160px 0;
+  background:#eef3ec;      /* สีเต็มจอ */
+  padding:160px 0;        /* เพิ่มความโปร่ง */
   width:100%;
 }
 
+/* ทำให้ background เต็มจอจริง */
 .about-section .wrapper{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:100px;
-  flex-direction:row-reverse; /* สลับให้รูปไปขวา */
+  flex-direction:row-reverse; /* รูปอยู่ขวา */
+
   max-width:1200px;       /* คุมความกว้างเนื้อหา */
   margin:0 auto;          /* จัดกลาง */
   padding:0 40px;         /* เว้นขอบ */
 }
 
+/* ขยายรูปให้เท่า Investment */
 .about-section img{
   width:100%;
+  max-width:700px;        /* จาก 550 → 700 */
   border-radius:35px;
-  max-width:700px;
   box-shadow:0 40px 80px rgba(0,0,0,0.18);
 }
+
+/* ขยาย content ให้บาลานซ์ */
 .about-section .content{
   max-width:520px;
 }
 
-.about-section content h2{
+.about-section .content h2{
   font-family:'Playfair Display', serif;
-  font-size:56px;
+  font-size:56px;         /* เท่า Investment */
   margin-bottom:30px;
   color:#2f3e2e;
 }
 
-.about-section content p{
+.about-section .content p{
   font-size:20px;
   line-height:1.9;
   color:#3e4e3d;
