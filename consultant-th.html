@@ -1,142 +1,193 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ที่ปรึกษาโครงการ | Khao Kho Empire</title>
+<title>Private Consultation | Khao Kho Empire</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;background:#f6f6f2;color:#2f3e2e;}
-html{scroll-behavior:smooth;}
 
-.main-nav{
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#1f2e20;
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:#f4f6f2;
+  color:#2f3e2e;
 }
 
-.logo{
-font-family:'Playfair Display',serif;
-color:white;
-text-decoration:none;
-font-size:22px;
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
 }
 
-.back-btn{
-color:white;
-text-decoration:none;
-border:1px solid white;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  text-align:center;
+  margin-bottom:20px;
 }
 
-.page-hero{
-padding:120px 12% 60px 12%;
-text-align:center;
+.subtitle{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 70px;
+  font-size:18px;
+  color:#555;
 }
 
-.page-hero h1{
-font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:15px;
+/* Advisor Grid */
+.advisor-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:50px;
 }
 
-.consultant-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:50px;
-padding:0 12% 120px 12%;
+.advisor-card{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  transition:0.4s;
 }
 
-.consultant-card{
-background:white;
-padding:40px 30px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.08);
-text-align:center;
-transition:0.3s;
+.advisor-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 80px rgba(0,0,0,0.15);
 }
 
-.consultant-card:hover{transform:translateY(-8px);}
-
-.consultant-card img{
-width:150px;height:150px;border-radius:50%;
-object-fit:cover;margin-bottom:20px;
+.advisor-card img{
+  width:180px;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:25px;
 }
 
-.role{font-size:14px;color:#888;margin-bottom:15px;}
-.desc{font-size:15px;color:#555;margin-bottom:25px;line-height:1.6;}
-
-.buttons{
-display:flex;justify-content:center;gap:15px;flex-wrap:wrap;
+.advisor-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+  margin-bottom:8px;
 }
 
-.btn-solid{
-padding:10px 25px;border-radius:30px;
-background:#1e2a1f;color:white;text-decoration:none;font-size:14px;
+.role{
+  font-size:14px;
+  letter-spacing:1px;
+  color:#6b8e73;
+  margin-bottom:15px;
+  text-transform:uppercase;
 }
 
-.btn-outline{
-padding:10px 25px;border-radius:30px;
-border:1px solid #1e2a1f;color:#1e2a1f;text-decoration:none;font-size:14px;
+.quote{
+  font-size:14px;
+  font-style:italic;
+  color:#666;
+  margin-bottom:25px;
 }
 
-.btn-outline:hover{background:#1e2a1f;color:white;}
-
-@media(max-width:768px){
-.page-hero{padding:100px 8% 50px;}
-.consultant-grid{padding:0 8% 80px;}
+.contact-btn{
+  display:inline-block;
+  padding:10px 24px;
+  background:#1f2e20;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:14px;
+  transition:0.3s;
 }
+
+.contact-btn:hover{
+  background:#6b8e73;
+}
+
+/* Appointment Section */
+.appointment{
+  margin-top:120px;
+  background:white;
+  padding:60px;
+  border-radius:30px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+.appointment h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  margin-bottom:30px;
+}
+
+form{
+  display:grid;
+  gap:20px;
+}
+
+input, textarea{
+  padding:15px;
+  border-radius:15px;
+  border:1px solid #ddd;
+  font-size:14px;
+}
+
+button{
+  padding:15px;
+  background:#1f2e20;
+  color:white;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#6b8e73;
+}
+
 </style>
 </head>
-
 <body>
 
-<nav class="main-nav">
-<a href="index.html" class="logo">Khao Kho Empire</a>
-<a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
-</nav>
+<div class="container">
 
-<section class="page-hero">
-<h1>ที่ปรึกษาโครงการ</h1>
-<p>บริการให้คำปรึกษาการลงทุนและพัฒนาโครงการแบบส่วนตัว</p>
-</section>
-
-<section class="consultant-grid">
-
-<div class="consultant-card">
-<img src="consultant1.jpg" alt="">
-<h3>คุณวีนัส</h3>
-<p class="role">ที่ปรึกษาการลงทุนที่ดินอาวุโส</p>
-<p class="desc">
-ผู้เชี่ยวชาญด้านการจัดหาที่ดินวิวภูเขาระดับลักชัวรี และการพัฒนา Pool Villa
+<h1>Private Consultation</h1>
+<p class="subtitle">
+Our dedicated advisors provide discreet, personalized guidance for every investment decision.
 </p>
-<div class="buttons">
-<a href="tel:0620582662" class="btn-outline">โทร</a>
-<a href="https://line.me/ti/p/@venusproperty" target="_blank" class="btn-solid">LINE</a>
-</div>
+
+<div class="advisor-grid">
+
+<div class="advisor-card">
+<img src="advisor1.jpg">
+<h3>Miss Duannapha Meethonglarng</h3>
+<div class="role">Luxury Property Consultant</div>
+<div class="quote">"Long-term value is built on location, timing, and vision."</div>
+<a href="mailto:advisor@khaokhoempire.com" class="contact-btn">Direct Contact</a>
 </div>
 
-<div class="consultant-card">
-<img src="consultant2.jpg" alt="">
-<h3>คุณอเล็กซ์</h3>
-<p class="role">ที่ปรึกษาการลงทุนต่างประเทศ</p>
-<p class="desc">
-ดูแลนักลงทุนต่างชาติในด้านโครงสร้างการถือครองที่ดินและการวางแผนผลตอบแทน
-</p>
-<div class="buttons">
-<a href="tel:0812345678" class="btn-outline">โทร</a>
-<a href="#" class="btn-solid">LINE</a>
-</div>
+<div class="advisor-card">
+<img src="advisor2.jpg">
+<h3>Miss Kanokkarn Boonprakom</h3>
+<div class="role">Luxury Property Consultant</div>
+<div class="quote">"Every plot tells a story. We help you choose the right one."</div>
+<a href="mailto:advisor@khaokhoempire.com" class="contact-btn">Direct Contact</a>
 </div>
 
-</section>
+</div>
+
+<div class="appointment">
+<h2>Schedule a Private Appointment</h2>
+
+<form>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email Address">
+<input type="tel" placeholder="Phone Number">
+<textarea rows="5" placeholder="Your Investment Interest"></textarea>
+<button type="submit">Request Consultation</button>
+</form>
+
+</div>
+
+</div>
 
 </body>
 </html>
