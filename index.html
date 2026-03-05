@@ -752,7 +752,9 @@ footer{
 <div class="hero-content container">
 <h1 data-key="hero_title">Khao Kho Empire</h1>
 <p data-key="hero_sub">Luxury Mountain Land & Pool Villa House</p>
-<a href="consultation.html" class="btn" data-key="hero_btn">Private Consultation</a>
+<a id="consultBtn" href="consultation.html" class="btn" data-key="hero_btn">
+Private Consultation
+</a>
 </div>
 </section>
 
@@ -956,6 +958,32 @@ function updateGallery(){
 }
 
 });
+
+function setLang(lang){
+
+  const elements = document.querySelectorAll("[data-key]");
+
+  elements.forEach(el=>{
+    const key = el.getAttribute("data-key");
+    el.textContent = translations[lang][key];
+  });
+
+  // เปลี่ยนลิงก์ consultation ตามภาษา
+  const btn = document.getElementById("consultBtn");
+
+  if(lang === "th"){
+    btn.href = "consultation-th.html";
+  }
+
+  else if(lang === "cn"){
+    btn.href = "consultation-cn.html";
+  }
+
+  else{
+    btn.href = "consultation.html";
+  }
+
+}
 </script>
   
 </body>
