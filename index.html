@@ -1,1050 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="th">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khao Kho Empire</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HV46VK484"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-5HV46VK484');
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ที่ดินและพูลวิลล่าบนเขาค้อ | Khao Kho Empire</title>
+<meta name="description" content="ค้นหาที่ดินและพูลวิลล่าบนเขาค้อ พร้อมทีมที่ปรึกษาช่วยพิจารณาทำเลและรายละเอียดทรัพย์ ติดต่อ LINE @venusproperty เพื่อนัดชม">
+<meta property="og:title" content="Khao Kho Empire | ที่ดินและพูลวิลล่าบนเขาค้อ">
+<meta property="og:description" content="พื้นที่สำหรับการพักผ่อน และแผนในวันข้างหน้า สำรวจทรัพย์และพูดคุยกับทีมที่ปรึกษา">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://khaokhoempire.github.io/khao-kho-empire/">
+<meta property="og:image" content="https://khaokhoempire.github.io/khao-kho-empire/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#263b31">
+<link rel="canonical" href="https://khaokhoempire.github.io/khao-kho-empire/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HV46VK484">
 </script>
-  
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5HV46VK484');</script>
 <style>
-.investment-section{
-  background:var(--bg-soft);
-}
-
-.about-section h2,
-.investment-content h2{
-  color:var(--green-deep);
-}
-
-.about-section p,
-.investment-content p{
-  color:var(--text-soft);
-}
-
-  .gallery-section{
-  background:var(--bg-main);
-}
-
-.gallery-track img{
-  border-radius:22px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.12);
-}
-
-.gallery-btn{
-  background:var(--green-deep);
-}
-
-.gallery-btn:hover{
-  background:var(--green-sage);
-}
-
-  footer{
-  background:var(--green-deep);
-  color:#D9DED7;
-  padding:60px 20px;
-  font-size:14px;
-}
-  
-:root{
-  --bg-main:#F4F1EB;          /* ครีมอุ่น */
-  --bg-soft:#E8E4DC;          /* พื้นหลังสลับ section */
-  --green-deep:#2F3E34;       /* เขียวเข้ม */
-  --green-sage:#6F8A75;       /* เขียวหม่น */
-  --green-light:#A9B8A5;      /* เขียวอ่อน */
-  --gold-soft:#C6A96B;        /* ทองอ่อน */
-  --text-main:#2F3E34;
-  --text-soft:#5C6A60;
-  --white:#ffffff;
-}
-  body{
-  font-family:'Inter', sans-serif;
-  background:var(--bg-main);
-  color:var(--text-main);
-}
-  
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{scroll-behavior:smooth;}
-
-/* ========================= */
-/* Language consultation switch */
-/* ========================= */
-.language-switch{
-  position:fixed;
-  top:20px;
-  right:30px;
-  font-size:14px;
-}
-
-.language-switch a{
-  margin-left:10px;
-  text-decoration:none;
-  color:#2f3e2e;
-  font-weight:500;
-}
-
-.language-switch a:hover{
-  color:#6b8e73;
-}
- 
-/* ========================= */
-/* GLOBAL CONTAINER */
-/* ========================= */
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 20px;
-}
-
-/* ========================= */
-/* HEADER & NAVIGATION */
-/* ========================= */
-header{
-  background:linear-gradient(to right,var(--green-deep),#243228);
-  padding:22px 0;
-}
-
-.logo{
-  color:var(--white);
-  letter-spacing:1px;
-}
-
-
-.nav-links a:hover{
-  color:var(--gold-soft);
-}
-
-.logo{
-  font-family:'Playfair Display', serif;
-  font-size:24px;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
-.nav-links a{
-  color:var(--white);
-  font-weight:400;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-/* Language switch */
-.lang-switch button{
-  background:transparent;
-  border:1px solid white;
-  color:white;
-  padding:5px 12px;
-  border-radius:20px;
-  font-size:12px;
-  cursor:pointer;
-  margin-left:12px;
-  transition:0.3s;
-}
-
-.lang-switch button:hover{
-  background:white;
-  color:#1f2e20;
-}
-
-/* ========================= */
-/* HERO SECTION */
-/* ========================= */
-.hero .btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:16px 36px;
-  background:var(--gold-soft);
-  color:var(--green-deep);
-  text-decoration:none;
-  font-weight:500;
-  border-radius:40px;
-  transition:0.3s;
-}
-
-.hero .btn:hover{
-  background:#B9985A;
-}
- .hero{
-  position:relative;
-  height:90vh;
-  background:url('hero.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(20,25,20,0.55);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-}
-
-  .hero h1{
-  font-family:'Playfair Display', serif;
-  font-size:60px;
-  font-weight:600;
-  margin-bottom:20px;
-}
-
-.hero p{
-  font-size:20px;
-  letter-spacing:1px;
-  margin-bottom:10px;
-}
-  
-/* ========================= */
-/* ABOUT SECTION */
-/* ========================= */
-.about-section{
-  background:var(--bg-main);
-  padding:160px 0;
-  width:100%;
-}
-
-.about-section .wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:100px;
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 40px;
-}
-
-.about-section img{
-  width:120%;
-  max-width:750px;
-  border-radius:30px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.15);
-}
-
-.about-section .content{
-  max-width:520px;
-}
-
-.about-section .content h2{
-  font-family:'Playfair Display', serif;
-  font-size:50px;
-  margin-bottom:30px;
-  color:#2f3e2e;
-}
-
-.about-section .content p{
-  font-size:20px;
-  line-height:1.9;
-  color:#3e4e3d;
-}
-
-/* ========================= */
-/* INVESTMENT SECTION */
-/* ========================= */
-.investment-section{
-  background:var(--bg-soft);
-  padding:160px 0;
-}
-
-.investment-wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:80px;
-}
-
-.investment-image img{
-  width:100%;
-  max-width:700px;
-  border-radius:30px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.15);
-}
-
-.investment-content{
-  max-width:500px;
-}
-
-.investment-content h2{
-  font-family:'Playfair Display', serif;
-  font-size:52px;
-  margin-bottom:25px;
-}
-
-.investment-content p{
-  font-size:20px;
-  line-height:1.8;
-}
-
-/* ========================= */
-/* PURPOSE SECTION */
-/* ========================= */
-.purpose-section{
-  padding:160px 0;
-  background:var(--bg-main);
-  text-align:center;
-}
-
-.purpose-title{
-  font-family:'Playfair Display',serif;
-  font-size:38px;
-  margin-bottom:15px;
-}
-
-.purpose-sub{
-  color:#666;
-  margin-bottom:50px;
-  font-size:17px;
-  max-width:750px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.purpose-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:40px;
-}
-
-.purpose-card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 20px 50px rgba(0,0,0,0.1);
-  transition:0.4s;
-}
-
-.purpose-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 30px 80px rgba(0,0,0,0.2);
-}
-
-.purpose-card img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-}
-
-.purpose-content{
-  padding:35px 30px;
-}
-
-.purpose-content h3{
-  font-family:'Playfair Display',serif;
-  font-size:26px;
-  margin-bottom:12px;
-}
-
-.purpose-content p{
-  color:#555;
-  font-size:15px;
-}
-
-.purpose-btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 28px;
-  background:#6b8e73;
-  color:white;
-  text-decoration:none;
-  border-radius:30px;
-  transition:0.3s;
-}
-
-.purpose-btn:hover{
-  background:#587a61;
-}
-
-
-/* ========================= */
-/* GALLERY */
-/* ========================= */
-.gallery-section{
-  padding:160px 0;
-  text-align:center;
-}
-
-.gallery-section h2{
-  font-family:'Playfair Display',serif;
-  font-size:38px;
-  margin-bottom:60px;
-}
-
-/* wrapper */
-.gallery-wrapper{
-  position:relative;
-  display:flex;
-  align-items:center;
-}
-
-/* viewport */
-.gallery-viewport{
-  overflow:hidden;
-  width:100%;
-}
-
-/* track */
-.gallery-track{
-  display:flex;
-  gap:25px;
-  transition:transform 0.6s ease;
-}
-
-/* images */
-.gallery-track img{
-  width:calc((100% - 50px) / 3);
-  height:260px;
-  object-fit:cover;
-  border-radius:18px;
-  flex-shrink:0;
-}
-
-/* buttons */
-.gallery-btn{
-  background:var(--green-deep);
-  color:white;
-  border:none;
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:20px;
-  transition:0.3s;
-}
-
-.gallery-btn:hover{
-  background:var(--green-sage);
-}
-.prev{ margin-right:20px; }
-.next{ margin-left:20px; }
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-footer{
-  color:#ccc;
-  text-align:center;
-  font-size:14px;
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-@media(max-width:1000px){
-  .investment-wrapper{
-    flex-direction:column;
-    text-align:center;
-    gap:40px;
-  }
-
-  .investment-content h2{
-    font-size:38px;
-  }
-
-  .about-section .wrapper{
-    flex-direction:column;
-    text-align:center;
-    gap:40px;
-  }
-
-  .hero h1{
-    font-size:36px;
-  }
-}
-
-/* ===== MOBILE LAYOUT & RESPONSIVE IMPROVEMENTS ===== */
-
-/* Small devices */
-@media (max-width:768px) {
-
-  /* Body Padding ให้มีพื้นที่รอบด้าน */
-  body {
-    padding: 0 12px;
-  }
-
-  /* HERO */
-  .hero h1 {
-    font-size: 32px !important;
-  }
-
-  .hero p {
-    font-size: 16px !important;
-  }
-
-  .btn {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
-  /* TWO COLUMN → ONE COLUMN */
-  .two-col {
-    grid-template-columns: 1fr !important;
-    gap: 40px;
-  }
-
-  /* INVESTMENT */
-  .investment-wrapper {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .investment-content h2 {
-    font-size: 32px;
-  }
-
-  .investment-content p {
-    font-size: 16px;
-  }
-
-  /* PURPOSE SECTION */
-  .purpose-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  .purpose-sub {
-    font-size: 15px;
-    margin-bottom: 30px;
-  }
-
-  .purpose-grid {
-    grid-template-columns: 1fr !important;
-    gap: 25px;
-  }
-
-  .purpose-btn {
-    font-size: 14px;
-    padding: 10px 22px;
-  }
-
-  /* GALLERY */
-  .gallery {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px;
-  }
-
-  /* MAP */
-  .map-container iframe {
-    height: 300px !important;
-  }
-
-  /* NAVIGATION */
-  nav,
-  .main-nav {
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
-
-  .nav-links a{
-  font-size:18px;
-  letter-spacing:1px; /* ระยะห่างระหว่างไอคอน */
-  font-weight:500;
-}
-
-.nav-links a{
-  font-size:17px;     /* ขนาดตัวอักษร */
-  letter-spacing:0.8px;
-  font-weight:500;
-}
-
-  .line-btn {
-    padding: 12px 20px;
-    bottom: 18px;
-    right: 18px;
-  }
-}
-
-/* Extra Small devices */
-@media (max-width:480px) {
-
-  .hero h1 {
-    font-size: 28px !important;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 13px;
-  }
-
-}
-
-/* ============================= */
-/* MOBILE FIX – FINAL VERSION */
-/* ============================= */
-
-@media screen and (max-width: 768px) {
-
-  /* ลด padding หลัก */
-  .section{
-    padding:60px 0 !important;
-  }
-
-  /* HERO */
-  .hero{
-    height:75vh;
-    padding:0 20px;
-  }
-
-  .hero h1{
-    font-size:30px !important;
-    line-height:1.2;
-  }
-
-  .hero p{
-    font-size:16px !important;
-  }
-
-  /* TWO COLUMN → STACK */
-  .two-col{
-    grid-template-columns:1fr !important;
-    gap:30px !important;
-  }
-
-  /* INVESTMENT */
-  .investment-wrapper{
-    flex-direction:column !important;
-    gap:30px;
-    text-align:center;
-  }
-
-  .investment-content h2{
-    font-size:28px !important;
-  }
-
-  /* PURPOSE GRID */
-  .purpose-grid{
-    grid-template-columns:1fr !important;
-    gap:25px;
-  }
-
-  .purpose-title{
-    font-size:30px !important;
-  }
-
-  /* GALLERY FIX สำคัญมาก */
-  .gallery{
-    grid-template-columns:1fr !important;
-    gap:15px !important;
-  }
-
-  .gallery img{
-    border-radius:20px;
-  }
-
-  /* ลดช่องว่างก่อน footer */
-  footer{
-    margin-top:40px !important;
-  }
-
-  /* ปรับ map */
-  .map-container iframe{
-    height:280px !important;
-  }
-
-}
-
-/* จอเล็กมาก */
-@media screen and (max-width:480px){
-
-  .hero h1{
-    font-size:26px !important;
-  }
-
-  .btn{
-    padding:10px 20px;
-    font-size:14px;
-  }
-
-}
-
-/* ============================= */
-/* MOBILE GALLERY FIX – CORRECT */
-/* ============================= */
-@media screen and (max-width:768px){
-
-  .gallery-track{
-    gap:15px;
-  }
-
-  .gallery-track img{
-    width:100% !important;
-    height:220px;
-  }
-
-  .gallery-btn{
-    display:none; /* ซ่อนปุ่มเลื่อนในมือถือ */
-  }
-
-}
-
-/* ===================================== */
-/* MOBILE GALLERY – SHOW ALL IMAGES     */
-/* ===================================== */
-@media screen and (max-width:768px){
-
-  .gallery-slider{
-    overflow:visible !important;
-  }
-
-  .gallery-track{
-    display:flex !important;
-    flex-direction:column !important;
-    transform:none !important;
-    gap:20px;
-  }
-
-  .gallery-track img{
-    width:100% !important;
-    height:auto !important;
-    border-radius:20px;
-  }
-
-  .gallery-btn{
-    display:none !important;
-  }
-
-}
- 
+:root{--cream:#f5f1e9;--green:#263b31;--muted:#56665c;--gold:#cfb781;--line:#dcded4}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--green);font-family:Inter,'Noto Sans Thai',sans-serif;line-height:1.7}html{scroll-behavior:smooth;scroll-padding-top:110px}a{color:inherit}button{font:inherit}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.35;font-weight:500}h1{font-size:clamp(36px,4.7vw,68px);max-width:850px}h2{font-size:clamp(28px,3vw,42px)}h3{font-size:23px}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.section{padding:88px 0}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}.section-head{max-width:750px;margin-bottom:36px}.section-head p{margin-top:16px;color:var(--muted)}.button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 24px;border-radius:5px;background:var(--green);color:white;text-decoration:none;border:1px solid transparent;font-weight:500;cursor:pointer;gap:8px}.button:hover{background:#405747}.button.gold{background:var(--gold);color:#20352a}.button.outline{background:transparent;border-color:currentColor}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}a:focus-visible,button:focus-visible{outline:3px solid #be8b30;outline-offset:5px}.skip{position:fixed;top:-100px;left:16px;z-index:100;background:white;padding:10px}.skip:focus{top:10px}
+header{background:#1c2628;color:white;position:sticky;top:0;z-index:20}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:96px}.brand img{width:162px;height:80px;object-fit:contain}.nav-links{display:flex;gap:26px;align-items:center}.nav-links a{text-decoration:none;font-size:14px}.nav-links a:hover{color:var(--gold)}.languages{display:flex;gap:4px}.languages button{background:transparent;color:white;border:1px solid #6d7874;border-radius:3px;padding:6px 9px;min-height:36px;cursor:pointer}.languages button[aria-pressed=true]{background:var(--gold);color:var(--green);border-color:var(--gold)}.menu{display:none;background:transparent;color:white;border:1px solid #748178;padding:7px 12px;border-radius:4px}
+.hero{min-height:min(740px,83svh);display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(12,32,24,.77),rgba(12,32,24,.30)),url('hero.jpg') center/cover;color:white;padding:70px 0}.hero p{max-width:650px;margin-top:24px;font-size:18px;color:#f1f1e9}.hero .eyebrow{color:#e3ce9f}.hero .outline:hover{background:#ffffff18}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}.card img{width:100%;height:240px;object-fit:cover}.card-body{padding:26px;flex:1;display:flex;flex-direction:column;align-items:start}.card p{color:var(--muted);margin:12px 0 24px}.card .button{margin-top:auto;font-size:14px}.note{font-size:13px;color:var(--muted);margin-top:20px}.purpose{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}.purpose h3{font-size:20px}.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.pills a{border:1px solid #bcc6ba;border-radius:30px;padding:10px 18px;text-decoration:none;background:white;font-size:14px}.pills a:hover{background:#e5e9df}.hold-link{display:inline-block;margin-top:18px;text-underline-offset:5px;font-size:14px}
+.team{background:#e8e7de}.team-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}.team-copy h2{font-size:14px;letter-spacing:1px;margin-bottom:20px}.team-copy h3{font-size:clamp(28px,3vw,39px)}.team-copy p{margin-top:24px;color:var(--muted)}.advisors{display:grid;grid-template-columns:1fr 1fr;gap:20px}.advisor img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 20%;border-radius:8px}.advisor h3{font-size:17px;margin-top:16px}.advisor p{font-size:13px;color:var(--muted);margin-top:4px}.stories figure{margin:0}.stories img{width:100%;height:340px;object-fit:cover;border-radius:8px}.stories figcaption{margin-top:12px;font-size:14px;color:var(--muted)}.extra-gallery{margin-top:24px}.extra-gallery img{height:300px}.center{text-align:center;margin-top:32px}[hidden]{display:none!important}.steps{background:#e8e7de}.step{border-top:1px solid #b9c4b7;padding-top:22px}.number{font-family:'Playfair Display',serif;font-size:36px;color:#7b856a;margin-bottom:16px}.step p{color:var(--muted);margin-top:12px}
+.contact{background:var(--green);color:white}.contact-layout{display:flex;align-items:center;justify-content:space-between;gap:40px}.contact p{max-width:640px;color:#d7dfd5;margin-top:16px}.contact .actions{flex-shrink:0}.social{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px}.social a{text-underline-offset:5px}footer{background:#1c2628;color:#ced6cc;padding:32px 0 94px;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.disclaimer{max-width:900px;margin-bottom:24px;color:#bac6bd}.floating{position:fixed;bottom:20px;right:20px;z-index:15;box-shadow:0 6px 24px #0003;background:#d8c491;color:#20352a;font-size:14px}
+@media(max-width:1000px){.nav{gap:14px}.nav-links{gap:14px}.team-layout{gap:32px}.contact-layout{display:block}.grid{gap:18px}.card-body{padding:20px}}
+@media(max-width:800px){html{scroll-padding-top:85px}.wrap{width:calc(100% - 36px)}.nav{min-height:80px;flex-wrap:wrap;gap:10px;padding:8px 0}.brand img{width:120px;height:62px}.menu{display:block;margin-left:auto;min-height:40px}.nav-links{display:none;order:4;width:100%;padding:12px 0 20px;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:8px 0}.languages button{padding:5px 7px;font-size:12px}.hero{min-height:610px;padding:60px 0;background-position:58% center}.hero p{font-size:16px}.section{padding:60px 0}.grid{grid-template-columns:1fr}.card img{height:240px}.team-layout{grid-template-columns:1fr;gap:36px}.advisors{gap:16px}.advisor h3{font-size:16px}.stories img{height:300px}.extra-gallery img{height:260px}.contact .actions{margin-top:28px}.floating{bottom:12px;right:12px;min-height:46px;padding:10px 18px}.steps .grid{gap:32px}.hero .actions{align-items:flex-start}.hero h1{font-size:38px}.section-head{margin-bottom:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-  
 <body>
-  
-<!-- Link consultation -->
-<div class="language-switch">
-<a href="consultation.html">EN</a>
-<a href="consultation-th.html">TH</a>
-<a href="consultation-cn.html">中文</a>
-</div>
-
+<a data-i18n="skip" class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
 <header>
-<div class="container">
-<nav>
-  <a href="index.html" class="logo">Khao Kho Empire</a>
-  <div class="nav-links">
-    <a href="#about" data-key="nav_home">Home</a>
-    <a href="#investment" data-key="nav_collection">Collection</a>
-    <a href="#gallery" data-key="nav_gallery">Gallery</a>
-    <a href="#contact" data-key="nav_contact">Contact</a>
-  </div>
-  <div class="lang-switch">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('th')">TH</button>
-    <button onclick="setLang('cn')">中文</button>
-  </div>
+<nav class="wrap nav" aria-label="Main navigation">
+<a class="brand" href="index.html" aria-label="Khao Kho Empire">
+<img src="logo.png" width="162" height="80" alt="Khao Kho Empire">
+</a>
+<button data-i18n="menuOpen" class="menu" id="menu" aria-expanded="false" aria-controls="navigation" type="button">เปิดเมนู</button>
+<div class="nav-links" id="navigation">
+<a data-i18n="navCollection" class="" href="#collection" >ทรัพย์คัดสรร</a>
+<a data-i18n="navTeam" class="" href="#team" >รู้จักเรา</a>
+<a data-i18n="navStories" class="" href="#stories" >เรื่องราวเขาค้อ</a>
+<a data-i18n="navContact" class="" href="#contact" >ติดต่อ</a>
+</div>
+<div class="languages" aria-label="Language">
+<button type="button" data-lang="th" aria-pressed="true">TH</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+<button type="button" data-lang="cn" aria-pressed="false">中文</button>
+</div>
 </nav>
-</div>
 </header>
-
+<main id="main">
 <section class="hero">
-<div class="hero-content container">
-<h1 data-key="hero_title">Khao Kho Empire</h1>
-<p data-key="hero_sub">Luxury Mountain Land & Pool Villa House</p>
-<a id="consultBtn" href="consultation.html" class="btn" data-key="hero_btn">
-Private Consultation
-</a>
+<div class="wrap">
+<div data-i18n="eyebrow" class="eyebrow">ที่ดินและพูลวิลล่าคัดสรรบนเขาค้อ</div>
+<h1 data-i18n="title" >พื้นที่สำหรับการพักผ่อน และแผนในวันข้างหน้า</h1>
+<p data-i18n="intro" >ค้นหาที่ดินและพูลวิลล่าที่สอดคล้องกับความต้องการของคุณ พร้อมทีมที่ปรึกษาช่วยพิจารณาทำเลและรายละเอียดทรัพย์</p>
+<div class="actions">
+<a data-i18n="explore" class="button gold" href="#collection" >ชมทรัพย์คัดสรร</a>
+<a data-i18n="talk" class="button outline" href="https://line.me/R/ti/p/%40venusproperty" data-track="line_hero">พูดคุยกับที่ปรึกษา</a>
+</div>
 </div>
 </section>
-
-<section id="about" class="about-section">
-<div class="wrapper">
-<div class="content">
-<h2 data-key="about_title">About The Estate</h2>
-<p data-key="about_text">Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.</p>
+<section class="section" id="collection">
+<div class="wrap">
+<div class="section-head">
+<h2 data-i18n="collectionTitle" >เริ่มจากพื้นที่ที่คุณกำลังมองหา</h2>
+<p data-i18n="collectionIntro" >เลือกชมที่ดิน หรือพูดคุยเรื่องพูลวิลล่า เพื่อรับรายการทรัพย์และรายละเอียดล่าสุดจากทีม</p>
 </div>
+<div class="grid">
+<article class="card">
+<img src="development.jpg" width="600" height="400" loading="lazy" alt="ที่ดินสำหรับบ้านพักส่วนตัว" data-alt="landTitle">
+<div class="card-body">
+<h3 data-i18n="landTitle" >ที่ดินสำหรับบ้านพักส่วนตัว</h3>
+<p data-i18n="landText" >สำรวจพื้นที่สำหรับบ้านที่คุณอยากกลับมาใช้เวลา</p>
+<a data-i18n="landBtn" class="button" href="residential.html" data-track="collection_land">ชมที่ดินเพื่ออยู่อาศัย</a>
+</div>
+</article>
+<article class="card">
+<img src="holding.jpg" width="600" height="400" loading="lazy" alt="ที่ดินสำหรับพัฒนาโครงการ" data-alt="devTitle">
+<div class="card-body">
+<h3 data-i18n="devTitle" >ที่ดินสำหรับพัฒนาโครงการ</h3>
+<p data-i18n="devText" >พิจารณาทำเลและข้อมูลรายแปลงให้สอดคล้องกับแผนธุรกิจ</p>
+<a data-i18n="devBtn" class="button" href="development.html" data-track="collection_dev">ชมที่ดินเพื่อพัฒนา</a>
+</div>
+</article>
+<article class="card">
+<img src="villa1.jpg" width="600" height="400" loading="lazy" alt="พูลวิลล่าบนเขาค้อ" data-alt="villaTitle">
+<div class="card-body">
+<h3 data-i18n="villaTitle" >พูลวิลล่าบนเขาค้อ</h3>
+<p data-i18n="villaText" >บ้านพักส่วนตัว หรือพิจารณาการปล่อยเช่าตามเงื่อนไขแต่ละโครงการ</p>
+<a data-i18n="villaBtn" class="button" href="https://line.me/R/ti/p/%40venusproperty" data-track="collection_villa">ขอรายการพูลวิลล่า</a>
+</div>
+</article>
+</div>
+<p data-i18n="photoNote" class="note">ภาพจากเว็บไซต์เดิม โปรดขอภาพและสถานะล่าสุดของทรัพย์ที่สนใจ</p>
+<div class="purpose">
+<h3 data-i18n="purposeTitle" >เลือกตามแผนของคุณ</h3>
+<div class="pills">
+<a data-i18n="purposeHome" class="" href="residential.html" >บ้านพักส่วนตัว</a>
+<a data-i18n="purposeRental" class="" href="https://line.me/R/ti/p/%40venusproperty" >พูลวิลล่าเพื่อปล่อยเช่า</a>
+<a data-i18n="purposeDev" class="" href="development.html" >ที่ดินเพื่อพัฒนา</a>
+<a data-i18n="purposeHold" class="" href="investment.html" >ที่ดินเพื่อถือครอง</a>
+</div>
+<a data-i18n="holdBtn" class="hold-link" href="investment.html" >รับรายละเอียดที่ดินเพื่อถือครอง</a>
+</div>
+</div>
+</section>
+<section class="section team" id="team">
+<div class="wrap team-layout">
+<div class="team-copy">
+<h2 data-i18n="teamTitle" >รู้จัก Khao Kho Empire</h2>
+<h3 data-i18n="teamHeadline" >เราเชื่อว่าทรัพย์ที่เหมาะสม เริ่มจากการเข้าใจความต้องการของคุณ</h3>
+<p data-i18n="teamIntro" >พูดคุยกับทีมถึงวัตถุประสงค์ งบประมาณ และทำเลที่สนใจ แล้วขอข้อมูลทรัพย์เพื่อประกอบการตัดสินใจก่อนนัดชม</p>
+<div class="actions">
+<a data-i18n="teamBtn" class="button" href="https://line.me/R/ti/p/%40venusproperty" data-track="line_team">ติดต่อทีมผ่าน LINE</a>
+</div>
+</div>
+<div class="advisors">
+<article class="advisor">
+<img src="advisor1.jpg" width="450" height="600" loading="lazy" alt="เดือนนภา มีทองหลาง" data-alt="advisor1">
+<h3 data-i18n="advisor1" >เดือนนภา มีทองหลาง</h3>
+<p data-i18n="role" >ที่ปรึกษาด้านอสังหาริมทรัพย์</p>
+</article>
+<article class="advisor">
+<img src="advisor2.jpg" width="450" height="600" loading="lazy" alt="กนกกาญจน์ บุญประคม" data-alt="advisor2">
+<h3 data-i18n="advisor2" >กนกกาญจน์ บุญประคม</h3>
+<p data-i18n="role" >ที่ปรึกษาด้านอสังหาริมทรัพย์</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section stories" id="stories">
+<div class="wrap">
+<div class="section-head">
+<h2 data-i18n="storiesTitle" >ใช้เวลา รู้จักเขาค้อ</h2>
+<p data-i18n="storiesIntro" >บรรยากาศจากแกลเลอรีเดิมของเรา ไม่ใช่การยืนยันวิวจากทรัพย์ทุกแปลง</p>
+</div>
+<div class="grid">
+<figure>
+<img src="gallery1.jpg" width="600" height="800" loading="lazy" alt="บรรยากาศยามเย็น" data-alt="caption1">
+<figcaption data-i18n="caption1" >บรรยากาศยามเย็น</figcaption>
+</figure>
+<figure>
+<img src="gallery2.jpg" width="600" height="800" loading="lazy" alt="ช่วงเวลาพักผ่อน" data-alt="caption2">
+<figcaption data-i18n="caption2" >ช่วงเวลาพักผ่อน</figcaption>
+</figure>
+<figure>
+<img src="gallery3.jpg" width="600" height="800" loading="lazy" alt="เขาค้อในความทรงจำ" data-alt="caption3">
+<figcaption data-i18n="caption3" >เขาค้อในความทรงจำ</figcaption>
+</figure>
+</div>
+<div class="grid extra-gallery" id="extra-gallery" hidden>
+<img src="gallery4.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 4" data-alt="storiesTitle">
+<img src="gallery5.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 5" data-alt="storiesTitle">
+<img src="gallery6.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 6" data-alt="storiesTitle">
+<img src="gallery7.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 7" data-alt="storiesTitle">
+<img src="gallery8.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 8" data-alt="storiesTitle">
+<img src="gallery9.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 9" data-alt="storiesTitle">
+<img src="gallery10.jpg" width="600" height="800" loading="lazy" alt="ภาพจากแกลเลอรี Khao Kho Empire 10" data-alt="storiesTitle">
+</div>
+<div class="center">
+<button data-i18n="more" id="gallery-toggle" type="button" class="button outline" aria-expanded="false" aria-controls="extra-gallery">ชมภาพเพิ่มเติม</button>
+</div>
+</div>
+</section>
+<section class="section steps">
+<div class="wrap">
+<div class="section-head">
+<h2 data-i18n="stepsTitle" >เริ่มต้นอย่างเป็นขั้นตอน</h2>
+</div>
+<div class="grid">
+<article class="step">
+<div class="number">01</div>
+<h3 data-i18n="step1" >บอกสิ่งที่คุณมองหา</h3>
+<p data-i18n="step1Text" >แชร์วัตถุประสงค์ งบประมาณ และช่วงเวลาที่สะดวก</p>
+</article>
+<article class="step">
+<div class="number">02</div>
+<h3 data-i18n="step2" >รับข้อมูลทรัพย์</h3>
+<p data-i18n="step2Text" >พิจารณาทำเล ราคา เอกสาร และเงื่อนไขของทรัพย์ที่สนใจ</p>
+</article>
+<article class="step">
+<div class="number">03</div>
+<h3 data-i18n="step3" >นัดชมและพูดคุย</h3>
+<p data-i18n="step3Text" >นัดชมพื้นที่จริง หรือสอบถามการนัดวิดีโอคอลกับทีม</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section contact" id="contact">
+<div class="wrap">
+<div class="contact-layout">
 <div>
-<img src="villa1.jpg" alt="Estate view">
+<h2 data-i18n="contactTitle" >มาค้นหาพื้นที่ที่เหมาะกับคุณ</h2>
+<p data-i18n="contactIntro" >ทัก LINE เพื่อขอรายการทรัพย์ล่าสุด หรือพูดคุยเพื่อนัดชม</p>
+</div>
+<div class="actions">
+<a data-i18n="line" class="button gold" href="https://line.me/R/ti/p/%40venusproperty" data-track="line_contact">ขอรายละเอียดผ่าน LINE</a>
 </div>
 </div>
-</section>
-
-<section id="investment" class="investment-section">
-<div class="container investment-wrapper">
-<div class="investment-image">
-<img src="villa2.jpg" alt="Luxury Villa Development">
-</div>
-<div class="investment-content">
-<h2 data-key="invest_title">Investment Vision</h2>
-<p data-key="invest_text">Strategically positioned for luxury villa development and boutique resorts.</p>
-</div>
-</div>
-</section>
-
-<!-- PURPOSE -->
-<section class="purpose-section">
-<div class="container">
-<h2 class="purpose-title">Choose Your Investment Purpose</h2>
-<p class="purpose-sub">Select the land that aligns with your vision and long-term strategy.</p>
-
-<div class="purpose-grid">
-<div class="purpose-card">
-<img src="residence.jpg" alt="Residential Land">
-<div class="purpose-content">
-<h3>Residence</h3>
-<p>Perfect for private pool villa or mountain retreat living.</p>
-<a href="residential.html" class="purpose-btn">Explore Residential Plots</a>
-</div>
-</div>
-
-<div class="purpose-card">
-<img src="development.jpg" alt="Development Land">
-<div class="purpose-content">
-<h3>Development</h3>
-<p>Ideal for boutique resort or luxury property development.</p>
-<a href="development.html" class="purpose-btn">Explore Development Land</a>
-</div>
-</div>
-
-<div class="purpose-card">
-<img src="holding.jpg" alt="Investment Land">
-<div class="purpose-content">
-<h3>Long-Term Holding</h3>
-<p>Strategic land banking opportunity with long-term growth.</p>
-<a href="investment.html" class="purpose-btn">Explore Investment Plots</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="gallery" class="gallery-section">
-<div class="container">
-<h2>Luxury Gallery</h2>
-
-<div class="gallery-wrapper">
-  <button class="gallery-btn prev">&#10094;</button>
-
-  <div class="gallery-viewport">
-    <div class="gallery-track">
-
-      <img src="gallery1.jpg">
-      <img src="gallery2.jpg">
-      <img src="gallery3.jpg">
-      <img src="gallery4.jpg">
-      <img src="gallery5.jpg">
-      <img src="gallery6.jpg">
-      <img src="gallery7.jpg">
-      <img src="gallery8.jpg">
-      <img src="gallery9.jpg">
-      <img src="gallery10.jpg">
-
-    </div>
-  </div>
-
-  <button class="gallery-btn next">&#10095;</button>
-</div>
-
-</div>
-</section>
-
-<!-- SOCIAL MEDIA -->
-<section style="padding:100px 20px; text-align:center; background:var(--bg-soft);">
-<div class="container">
-
-<h2 style="font-family:'Playfair Display',serif; font-size:38px; margin-bottom:20px;">
-Follow Our Journey
-</h2>
-
-<p style="color:var(--text-soft); margin-bottom:40px;">
-Discover lifestyle moments and investment opportunities at Khao Kho Empire
+<p>LINE: <a href="https://line.me/R/ti/p/%40venusproperty" data-track="line_id">@venusproperty</a>
 </p>
-
-<div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-
-<a href="https://www.facebook.com/khaokhoempire"
-target="_blank"
-style="padding:14px 28px; background:#1877f2; color:white; text-decoration:none; border-radius:30px; font-weight:500;">
-Facebook
-</a>
-
-<a href="https://www.tiktok.com/@venusproperty88"
-target="_blank"
-style="padding:14px 28px; background:#000; color:white; text-decoration:none; border-radius:30px; font-weight:500;">
-TikTok
-</a>
-
-<a href="https://www.youtube.com/@venusproperty88"
-target="_blank"
-style="padding:14px 28px; background:#ff0000; color:white; text-decoration:none; border-radius:30px; font-weight:500;">
-YouTube
-</a>
-
+<p data-i18n="follow" >ติดตามเรื่องราวของเรา</p>
+<div class="social">
+<a data-i18n="facebook" class="" href="https://www.facebook.com/khaokhoempire" target="_blank" rel="noopener noreferrer" data-track="facebook">ติดตามบน Facebook</a>
+<a href="https://www.tiktok.com/@venusproperty88" target="_blank" rel="noopener noreferrer">TikTok</a>
+<a href="https://www.youtube.com/@venusproperty88" target="_blank" rel="noopener noreferrer">YouTube</a>
 </div>
-
 </div>
 </section>
-  
-<footer id="contact">
-<p>© 2026 Khao Kho Empire. All Rights Reserved.</p>
+</main>
+<footer>
+<div class="wrap">
+<p data-i18n="disclaimer" class="disclaimer">ความเหมาะสมในการพัฒนาและการปล่อยเช่าต้องตรวจสอบเป็นรายทรัพย์ ผลตอบแทนขึ้นอยู่กับต้นทุน เงื่อนไข และผลการดำเนินงานจริง</p>
+<div class="footer-row">
+<p>© 2026 Khao Kho Empire. <span data-i18n="copyright" >สิทธิ์ทั้งหมดสงวนไว้</span>
+</p>
+<a data-i18n="top" class="" href="#main" >กลับขึ้นด้านบน</a>
+</div>
+</div>
 </footer>
-
-<script>
-
-const translations = {
-  en: {
-    nav_home:"Home",
-    nav_collection:"Collection",
-    nav_gallery:"Gallery",
-    nav_contact:"Contact",
-    hero_title:"Khao Kho Empire",
-    hero_sub:"Luxury Mountain Land & Pool Villa House",
-    hero_btn:"Private Consultation",
-    about_title:"About The Estate",
-    about_text:"Nestled in pristine mountain landscapes, offering panoramic views and cool climate year-round.",
-    invest_title:"Investment Vision",
-    invest_text:"Strategically positioned for luxury villa development and boutique resorts."
-  },
-  th: {
-    nav_home:"หน้าแรก",
-    nav_collection:"โครงการ",
-    nav_gallery:"แกลเลอรี",
-    nav_contact:"ติดต่อ",
-    hero_title:"Khao Kho Empire",
-    hero_sub:"ที่ดินภูเขาหรู & บ้านพูลวิลล่า",
-    hero_btn:"ปรึกษาส่วนตัว",
-    about_title:"เกี่ยวกับโครงการ",
-    about_text:"ตั้งอยู่ท่ามกลางภูเขาอันบริสุทธิ์ มองเห็นวิวพาโนรามา อากาศเย็นสบายตลอดปี",
-    invest_title:"วิสัยทัศน์การลงทุน",
-    invest_text:"ศักยภาพสูงสำหรับการพัฒนาวิลล่าหรูและบูทีครีสอร์ท"
-  },
-  cn: {
-    nav_home:"首页",
-    nav_collection:"项目",
-    nav_gallery:"画廊",
-    nav_contact:"联系",
-    hero_title:"Khao Kho Empire",
-    hero_sub:"豪华山地与泳池别墅",
-    hero_btn:"私人咨询",
-    about_title:"关于项目",
-    about_text:"坐落于纯净山景之中，全年凉爽气候与全景视野",
-    invest_title:"投资愿景",
-    invest_text:"战略位置优越，适合豪华别墅与精品度假村开发"
-  }
-};
-
-function setLang(lang){
-  const elements=document.querySelectorAll("[data-key]");
-  elements.forEach(el=>{
-    const key=el.getAttribute("data-key");
-    if(translations[lang][key]){
-      el.textContent=translations[lang][key];
-    }
-  });
-  localStorage.setItem("language",lang);
-}
-
-document.addEventListener("DOMContentLoaded",function(){
-  const savedLang=localStorage.getItem("language")||"en";
-  setLang(savedLang);
-});
-
-</script>   <!-- จบ script แปลภาษา -->
-
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-const track = document.querySelector('.gallery-track');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
-
-if(!track || !nextBtn || !prevBtn) return;
-  
-let index = 0;
-const totalImages = track.children.length;
-const visibleImages = 3;
-
-function isMobile(){
-  return window.innerWidth <= 768;
-}
-
-nextBtn.addEventListener('click', () => {
-
-  if(isMobile()) return;
-
-  if(index < totalImages - visibleImages){
-    index++;
-    updateGallery();
-  }
-});
-
-prevBtn.addEventListener('click', () => {
-
-  if(isMobile()) return;
-
-  if(index > 0){
-    index--;
-    updateGallery();
-  }
-});
-
-function updateGallery(){
-  const imageWidth = track.children[0].offsetWidth + 25;
-  track.style.transform = `translateX(-${index * imageWidth}px)`;
-}
-
-});
-
-function setLang(lang){
-
-  const elements = document.querySelectorAll("[data-key]");
-
-  elements.forEach(el=>{
-    const key = el.getAttribute("data-key");
-    el.textContent = translations[lang][key];
-  });
-
-  // เปลี่ยนลิงก์ consultation ตามภาษา
-  const btn = document.getElementById("consultBtn");
-
-  if(lang === "th"){
-    btn.href = "consultation-th.html";
-  }
-
-  else if(lang === "cn"){
-    btn.href = "consultation-cn.html";
-  }
-
-  else{
-    btn.href = "consultation.html";
-  }
-
-}
+<a data-i18n="line" class="button floating" href="https://line.me/R/ti/p/%40venusproperty" data-track="line_floating">ขอรายละเอียดผ่าน LINE</a>
+<script>const translations={"th": {"eyebrow": "ที่ดินและพูลวิลล่าคัดสรรบนเขาค้อ", "title": "พื้นที่สำหรับการพักผ่อน และแผนในวันข้างหน้า", "intro": "ค้นหาที่ดินและพูลวิลล่าที่สอดคล้องกับความต้องการของคุณ พร้อมทีมที่ปรึกษาช่วยพิจารณาทำเลและรายละเอียดทรัพย์", "explore": "ชมทรัพย์คัดสรร", "talk": "พูดคุยกับที่ปรึกษา", "navCollection": "ทรัพย์คัดสรร", "navTeam": "รู้จักเรา", "navStories": "เรื่องราวเขาค้อ", "navContact": "ติดต่อ", "collectionTitle": "เริ่มจากพื้นที่ที่คุณกำลังมองหา", "collectionIntro": "เลือกชมที่ดิน หรือพูดคุยเรื่องพูลวิลล่า เพื่อรับรายการทรัพย์และรายละเอียดล่าสุดจากทีม", "landTitle": "ที่ดินสำหรับบ้านพักส่วนตัว", "landText": "สำรวจพื้นที่สำหรับบ้านที่คุณอยากกลับมาใช้เวลา", "landBtn": "ชมที่ดินเพื่ออยู่อาศัย", "devTitle": "ที่ดินสำหรับพัฒนาโครงการ", "devText": "พิจารณาทำเลและข้อมูลรายแปลงให้สอดคล้องกับแผนธุรกิจ", "devBtn": "ชมที่ดินเพื่อพัฒนา", "villaTitle": "พูลวิลล่าบนเขาค้อ", "villaText": "บ้านพักส่วนตัว หรือพิจารณาการปล่อยเช่าตามเงื่อนไขแต่ละโครงการ", "villaBtn": "ขอรายการพูลวิลล่า", "photoNote": "ภาพจากเว็บไซต์เดิม โปรดขอภาพและสถานะล่าสุดของทรัพย์ที่สนใจ", "purposeTitle": "เลือกตามแผนของคุณ", "purposeHome": "บ้านพักส่วนตัว", "purposeRental": "พูลวิลล่าเพื่อปล่อยเช่า", "purposeDev": "ที่ดินเพื่อพัฒนา", "purposeHold": "ที่ดินเพื่อถือครอง", "holdBtn": "รับรายละเอียดที่ดินเพื่อถือครอง", "teamTitle": "รู้จัก Khao Kho Empire", "teamHeadline": "เราเชื่อว่าทรัพย์ที่เหมาะสม เริ่มจากการเข้าใจความต้องการของคุณ", "teamIntro": "พูดคุยกับทีมถึงวัตถุประสงค์ งบประมาณ และทำเลที่สนใจ แล้วขอข้อมูลทรัพย์เพื่อประกอบการตัดสินใจก่อนนัดชม", "advisor1": "เดือนนภา มีทองหลาง", "advisor2": "กนกกาญจน์ บุญประคม", "role": "ที่ปรึกษาด้านอสังหาริมทรัพย์", "teamBtn": "ติดต่อทีมผ่าน LINE", "storiesTitle": "ใช้เวลา รู้จักเขาค้อ", "storiesIntro": "บรรยากาศจากแกลเลอรีเดิมของเรา ไม่ใช่การยืนยันวิวจากทรัพย์ทุกแปลง", "caption1": "บรรยากาศยามเย็น", "caption2": "ช่วงเวลาพักผ่อน", "caption3": "เขาค้อในความทรงจำ", "more": "ชมภาพเพิ่มเติม", "less": "ซ่อนภาพเพิ่มเติม", "stepsTitle": "เริ่มต้นอย่างเป็นขั้นตอน", "step1": "บอกสิ่งที่คุณมองหา", "step1Text": "แชร์วัตถุประสงค์ งบประมาณ และช่วงเวลาที่สะดวก", "step2": "รับข้อมูลทรัพย์", "step2Text": "พิจารณาทำเล ราคา เอกสาร และเงื่อนไขของทรัพย์ที่สนใจ", "step3": "นัดชมและพูดคุย", "step3Text": "นัดชมพื้นที่จริง หรือสอบถามการนัดวิดีโอคอลกับทีม", "contactTitle": "มาค้นหาพื้นที่ที่เหมาะกับคุณ", "contactIntro": "ทัก LINE เพื่อขอรายการทรัพย์ล่าสุด หรือพูดคุยเพื่อนัดชม", "follow": "ติดตามเรื่องราวของเรา", "top": "กลับขึ้นด้านบน", "line": "ขอรายละเอียดผ่าน LINE", "skip": "ข้ามไปยังเนื้อหา", "menuOpen": "เปิดเมนู", "menuClose": "ปิดเมนู", "disclaimer": "ความเหมาะสมในการพัฒนาและการปล่อยเช่าต้องตรวจสอบเป็นรายทรัพย์ ผลตอบแทนขึ้นอยู่กับต้นทุน เงื่อนไข และผลการดำเนินงานจริง", "facebook": "ติดตามบน Facebook", "copyright": "สิทธิ์ทั้งหมดสงวนไว้"}, "en": {"eyebrow": "Curated land & pool villas in Khao Kho", "title": "A place to unwind. Room for your next chapter.", "intro": "Explore land and pool villas that fit your plans, with a team to help you consider locations and property details.", "explore": "Explore the collection", "talk": "Talk to our team", "navCollection": "Collection", "navTeam": "Our team", "navStories": "Khao Kho stories", "navContact": "Contact", "collectionTitle": "Start with the space you are looking for", "collectionIntro": "Browse land or ask about pool villas. Contact our team for current availability and property details.", "landTitle": "Land for a private retreat", "landText": "Explore spaces for a home you look forward to returning to.", "landBtn": "Explore residential land", "devTitle": "Land for development", "devText": "Consider each location and plot in relation to your business plans.", "devBtn": "Explore development land", "villaTitle": "Pool villas in Khao Kho", "villaText": "For a private retreat or rental consideration, subject to each project’s terms.", "villaBtn": "Request the villa collection", "photoNote": "Existing website photographs. Please request current images and status for the property you are considering.", "purposeTitle": "Choose your direction", "purposeHome": "Private retreat", "purposeRental": "Pool villa rentals", "purposeDev": "Land development", "purposeHold": "Land holding", "holdBtn": "Explore land for holding", "teamTitle": "Meet Khao Kho Empire", "teamHeadline": "The right property starts with understanding your plans.", "teamIntro": "Tell our team about your purpose, budget and preferred location. Request property information before arranging a visit.", "advisor1": "เดือนนภา มีทองหลาง", "advisor2": "Kanokkarn Boonprakom", "role": "Real estate advisor", "teamBtn": "Contact our team on LINE", "storiesTitle": "Take time to discover Khao Kho", "storiesIntro": "Scenes from our existing gallery; they do not confirm the view from every property.", "caption1": "Evening atmosphere", "caption2": "Time to unwind", "caption3": "Khao Kho memories", "more": "View more photographs", "less": "Show fewer photographs", "stepsTitle": "A considered first step", "step1": "Share your plans", "step1Text": "Tell us your purpose, budget and preferred timing.", "step2": "Review property information", "step2Text": "Consider the location, price, documents and terms of your selected property.", "step3": "Arrange a visit", "step3Text": "Visit in person or ask our team about a video call.", "contactTitle": "Find a space that fits your plans", "contactIntro": "Message us on LINE for the latest collection or to discuss a visit.", "follow": "Follow our journey", "top": "Back to top", "line": "Ask on LINE", "skip": "Skip to content", "menuOpen": "Open menu", "menuClose": "Close menu", "disclaimer": "Development and rental suitability require property-specific checks. Returns depend on costs, terms and actual operating results.", "facebook": "Follow on Facebook", "copyright": "All rights reserved."}, "cn": {"eyebrow": "考柯精选土地与泳池别墅", "title": "放松身心的空间，开启未来的计划", "intro": "寻找符合您需求的土地与泳池别墅，由我们的团队协助了解地段与房产详情。", "explore": "浏览精选房产", "talk": "联系顾问", "navCollection": "房产精选", "navTeam": "认识我们", "navStories": "考柯故事", "navContact": "联系我们", "collectionTitle": "从您想寻找的空间开始", "collectionIntro": "浏览土地或咨询泳池别墅，向团队索取最新房源与详情。", "landTitle": "私人度假住宅用地", "landText": "探索适合打造度假住宅的空间。", "landBtn": "浏览住宅用地", "devTitle": "项目开发用地", "devText": "结合您的业务计划，了解各地段与地块资料。", "devBtn": "浏览开发用地", "villaTitle": "考柯泳池别墅", "villaText": "用于私人度假或考虑出租，具体以各项目条款为准。", "villaBtn": "索取别墅房源", "photoNote": "图片来自现有网站。请索取意向房产的最新图片与状态。", "purposeTitle": "按您的计划选择", "purposeHome": "私人度假住宅", "purposeRental": "泳池别墅出租", "purposeDev": "土地开发", "purposeHold": "土地持有", "holdBtn": "浏览持有型土地", "teamTitle": "认识 Khao Kho Empire", "teamHeadline": "合适的房产，始于了解您的需求。", "teamIntro": "向团队说明购置目的、预算及意向地段，预约看房前先了解房产资料。", "advisor1": "เดือนนภา มีทองหลาง", "advisor2": "Kanokkarn Boonprakom", "role": "房地产顾问", "teamBtn": "通过 LINE 联系团队", "storiesTitle": "慢慢认识考柯", "storiesIntro": "图片来自现有图库，并不代表每处房产都拥有同样的景观。", "caption1": "傍晚氛围", "caption2": "休闲时光", "caption3": "考柯回忆", "more": "查看更多照片", "less": "收起照片", "stepsTitle": "从容开始", "step1": "说明您的需求", "step1Text": "告知购置目的、预算与方便的时间。", "step2": "了解房产资料", "step2Text": "考虑意向房产的地段、价格、文件与条款。", "step3": "预约参观", "step3Text": "实地参观，或咨询团队是否可安排视频看房。", "contactTitle": "寻找适合您的空间", "contactIntro": "通过 LINE 索取最新房源，或咨询预约参观。", "follow": "关注我们的故事", "top": "返回顶部", "line": "通过 LINE 咨询", "skip": "跳至正文", "menuOpen": "打开菜单", "menuClose": "关闭菜单", "disclaimer": "开发与出租的适用性需逐一核实。收益取决于成本、条款及实际经营结果。", "facebook": "关注 Facebook", "copyright": "版权所有。"}};
+let currentLang='th';
+const menu=document.getElementById('menu'),navigation=document.getElementById('navigation'),galleryToggle=document.getElementById('gallery-toggle'),gallery=document.getElementById('extra-gallery');
+function setLang(lang){if(!translations[lang])lang='th';currentLang=lang;document.documentElement.lang=lang==='cn'?'zh-Hans':lang;document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=translations[lang][el.dataset.i18n]);document.querySelectorAll('[data-alt]').forEach(el=>el.alt=translations[lang][el.dataset.alt]);document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.lang===lang)));menu.textContent=translations[lang][menu.getAttribute('aria-expanded')==='true'?'menuClose':'menuOpen'];galleryToggle.textContent=translations[lang][gallery.hidden?'more':'less'];document.title=translations[lang].eyebrow+' | Khao Kho Empire';document.querySelector('meta[name="description"]').content=translations[lang].intro;try{localStorage.setItem('language',lang)}catch(e){}}
+document.querySelectorAll('[data-lang]').forEach(el=>el.addEventListener('click',()=>setLang(el.dataset.lang)));
+let saved='th';try{saved=localStorage.getItem('language')||'th'}catch(e){}setLang(saved);
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));navigation.classList.toggle('open',open);menu.textContent=translations[currentLang][open?'menuClose':'menuOpen']});
+navigation.querySelectorAll('a').forEach(el=>el.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');navigation.classList.remove('open');menu.textContent=translations[currentLang].menuOpen}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.click();menu.focus()}});
+galleryToggle.addEventListener('click',()=>{gallery.hidden=!gallery.hidden;galleryToggle.setAttribute('aria-expanded',String(!gallery.hidden));galleryToggle.textContent=translations[currentLang][gallery.hidden?'more':'less']});
+document.querySelectorAll('[data-track]').forEach(el=>el.addEventListener('click',()=>{gtag('event',el.href.includes('line.me')?'contact_line':'select_collection',{cta_location:el.dataset.track,language:currentLang,transport_type:'beacon'})}));
 </script>
-  
 </body>
 </html>
